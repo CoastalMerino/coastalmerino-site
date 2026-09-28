@@ -123,6 +123,17 @@
   .founder-inner { max-width: 600px; margin: 0 auto; text-align: center; }
   .founder p.body { font-size: 19px; line-height: 1.7; color: var(--ink); margin-bottom: 20px; }
   .founder .sign { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 28px; }
+  .faq { border-top: 1px solid var(--line); padding: 80px 24px; }
+  .faq-inner { max-width: 680px; margin: 0 auto; }
+  .faq h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 400; text-align: center; margin-bottom: 40px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq details:first-of-type { border-top: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; padding: 20px 32px 20px 0; font-size: 16px; font-weight: 500; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-size: 22px; font-weight: 400; color: var(--muted); }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq details p { font-size: 15px; line-height: 1.7; color: var(--muted); padding: 0 32px 22px 0; }
+  .faq a { color: var(--ink); }
   .links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
@@ -178,6 +189,38 @@
     <p class="body">I couldn't find a golf polo without polyester in it. Everything on the rack was synthetic, and the natural options weren't built for a real round. So we made one.</p>
     <p class="body">I grew up in Northern California, played baseball at USC, and keep synthetics out of my life wherever I can. Merino breathes, resists odor, and moves with you. It should be the standard fabric in golf, and this polo is where we start.</p>
     <p class="sign">Jack Basseer, co-founder</p>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+  <div class="faq-inner">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-title">Before you tee off</h2>
+
+    <details>
+      <summary>When does the first polo launch?</summary>
+      <p>We're finalizing our first production run now. Join the list above and you'll hear first, before anything goes on sale.</p>
+    </details>
+    <details>
+      <summary>Won't wool be too hot for summer golf?</summary>
+      <p>Superfine merino is lighter and more breathable than most people expect. It moves heat and moisture away from your skin, so it stays comfortable on a warm afternoon and doesn't turn cold and clammy when the weather shifts.</p>
+    </details>
+    <details>
+      <summary>How does it fit?</summary>
+      <p>A classic, tailored golf fit: clean through the body, with room to swing. Full size details come with launch.</p>
+    </details>
+    <details>
+      <summary>Where is it made?</summary>
+      <p>Each polo is cut and sewn in Los Angeles from 100% merino fabric knit by a specialist mill.</p>
+    </details>
+    <details>
+      <summary>How do I care for it?</summary>
+      <p>Merino resists odor, so it needs washing less often than a synthetic polo. Full care instructions come with every polo.</p>
+    </details>
+    <details>
+      <summary>Can my club's pro shop carry Coastal Merino?</summary>
+      <p>We'd like to hear from you. Golf professionals and buyers can reach us at <a href="mailto:wholesale@coastalmerino.com">wholesale@coastalmerino.com</a>.</p>
+    </details>
   </div>
 </section>
 
