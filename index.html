@@ -110,6 +110,19 @@
   footer { font-size: 13px; color: var(--muted); }
   footer a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
   footer a:hover { color: var(--ink); }
+  .fabric { border-top: 1px solid var(--line); padding: 80px 24px; }
+  .fabric-inner { max-width: 960px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 16px; }
+  .fabric h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 400; line-height: 1.2; text-align: center; margin-bottom: 56px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px 32px; }
+  .point h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .point p { font-size: 15px; line-height: 1.65; color: var(--muted); }
+  .spec { text-align: center; font-size: 13px; letter-spacing: 0.08em; color: var(--muted); margin-top: 56px; line-height: 1.8; }
+  .hero { min-height: calc(100vh - 80px); }
+  .founder { border-top: 1px solid var(--line); padding: 80px 24px; }
+  .founder-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+  .founder p.body { font-size: 19px; line-height: 1.7; color: var(--ink); margin-bottom: 20px; }
+  .founder .sign { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 28px; }
   .links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
@@ -118,7 +131,7 @@
   <div class="wordmark">Coastal Merino</div>
 </header>
 
-<main>
+<main class="hero">
   <div class="wrap">
     <h1>The merino polo.<br>Cut and sewn in Los&nbsp;Angeles.</h1>
     <p class="lede">Superfine 100% merino for the course and the dinner after. No synthetics. First run coming soon.</p>
@@ -132,6 +145,41 @@
     <p class="note" id="note" role="status" aria-live="polite"></p>
   </div>
 </main>
+
+<section class="fabric" aria-labelledby="fabric-title">
+  <div class="fabric-inner">
+    <p class="eyebrow">The fabric</p>
+    <h2 id="fabric-title">Superfine merino, built for eighteen holes and what comes after.</h2>
+    <div class="grid">
+      <div class="point">
+        <h3>Feel</h3>
+        <p>17.3 micron superfine merino, knit into a classic piqué. Smooth, soft, and light on the skin.</p>
+      </div>
+      <div class="point">
+        <h3>Temperature</h3>
+        <p>Wool breathes and adapts. Cool through a warm afternoon round, comfortable when the marine layer rolls in.</p>
+      </div>
+      <div class="point">
+        <h3>Odor resistance</h3>
+        <p>Merino naturally resists odor, so it still feels fresh when you sit down for dinner.</p>
+      </div>
+      <div class="point">
+        <h3>Wrinkle resistance</h3>
+        <p>Merino fibers spring back. It holds its shape in a golf bag, a carry-on, or a long day.</p>
+      </div>
+    </div>
+    <p class="spec">100% merino wool. No synthetics. No glued collar.<br>Cut and sewn in Los Angeles.</p>
+  </div>
+</section>
+
+<section class="founder" aria-labelledby="founder-title">
+  <div class="founder-inner">
+    <p class="eyebrow" id="founder-title">Why we made it</p>
+    <p class="body">I couldn't find a golf polo without polyester in it. Everything on the rack was synthetic, and the natural options weren't built for a real round. So we made one.</p>
+    <p class="body">I grew up in Northern California, played baseball at USC, and keep synthetics out of my life wherever I can. Merino breathes, resists odor, and moves with you. It should be the standard fabric in golf, and this polo is where we start.</p>
+    <p class="sign">Jack Basseer, co-founder</p>
+  </div>
+</section>
 
 <footer>
   <div class="links">
