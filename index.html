@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coastal Merino</title>
+<meta name="description" content="A 100% merino golf polo, cut and sewn in Los Angeles. Coming soon.">
+<meta property="og:title" content="Coastal Merino">
+<meta property="og:description" content="A 100% merino golf polo, cut and sewn in Los Angeles. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coastalmerino.com">
+<meta name="theme-color" content="#F4F0E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F2A44'/%3E%3Ctext x='32' y='41' font-family='Helvetica,Arial,sans-serif' font-size='24' letter-spacing='2' fill='%23F4F0E8' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #F4F0E8;
+    --ink: #1F2A44;
+    --muted: #6B6A64;
+    --line: rgba(31, 42, 68, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header, footer { padding: 28px 24px; text-align: center; }
+  .wordmark {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    padding-left: 0.42em;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .wrap { width: 100%; max-width: 640px; text-align: center; }
+  h1 {
+    font-size: clamp(30px, 6vw, 44px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+  .lede {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin-bottom: 40px;
+  }
+  form {
+    display: flex;
+    border-bottom: 1px solid var(--ink);
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 16px;
+    color: var(--ink);
+    padding: 14px 4px;
+    outline: none;
+  }
+  input[type="email"]::placeholder { color: var(--muted); }
+  button {
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 14px 4px 14px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  button:disabled { opacity: 0.5; cursor: default; }
+  .hp { position: absolute; left: -9999px; }
+  .note { font-size: 13px; color: var(--muted); margin-top: 14px; min-height: 20px; }
+  .note.ok { color: var(--ink); }
+  footer { font-size: 13px; color: var(--muted); }
+  footer a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Coastal Merino</div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>The merino polo.<br>Cut and sewn in Los&nbsp;Angeles.</h1>
+    <p class="lede">Superfine 100% merino for the course and the dinner after. No synthetics. First run coming soon.</p>
+
+    <form id="signup" novalidate>
+      <label for="email" class="hp">Email address</label>
+      <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
+      <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Get first access</button>
+    </form>
+    <p class="note" id="note" role="status" aria-live="polite"></p>
+  </div>
+</main>
+
+<footer>
+  <a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a>
+</footer>
+
+<script>
+  var KIT_FORM_ID = "9974631";
+
+  var form = document.getElementById("signup");
+  var note = document.getElementById("note");
+  var btn = form.querySelector("button");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = form.email_address.value.trim();
+    note.className = "note";
+
+    if (form.company.value) return;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      note.textContent = "Enter a valid email address.";
+      return;
+    }
+
+    btn.disabled = true;
+    note.textContent = "";
+
+    var data = new FormData();
+    data.append("email_address", email);
+
+    fetch("https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    })
+      .then(function (r) { if (!r.ok) throw new Error(); })
+      .then(function () {
+        form.reset();
+        note.className = "note ok";
+        note.textContent = "You're on the list.";
+      })
+      .catch(function () {
+        note.textContent = "Something went wrong. Email us at hello@coastalmerino.com.";
+      })
+      .finally(function () { btn.disabled = false; });
+  });
+</script>
+</body>
+</html>
