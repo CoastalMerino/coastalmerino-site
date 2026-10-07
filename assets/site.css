@@ -59,7 +59,6 @@
   .hero-copy { position: relative; padding: 0 32px clamp(48px, 7vw, 88px); max-width: 1360px; width: 100%; margin: 0 auto; }
   .hero h1 { font: 400 clamp(60px, 10vw, 140px)/0.92 var(--display); letter-spacing: -0.02em; text-wrap: balance; }
   .eyebrow { display: inline-flex; gap: 10px; align-items: center; }
-  .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--clay); }
   .hero p.eyebrow { color: rgba(251,250,247,0.85); margin: 0 0 18px; font-size: 12px; }
   .hero p { font-size: clamp(18px, 1.8vw, 21px); margin: 22px 0 30px; max-width: 36ch; color: rgba(251,250,247,0.9); }
 
