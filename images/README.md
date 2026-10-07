@@ -9,15 +9,15 @@ brands' garments or logos, so all of them must be replaced or removed before lau
 
 | File | Shape | Used on | What the real shot should be |
 |---|---|---|---|
-| polo-4.jpg | 4:5 | Home hero, product page | Polo worn on course, golden-hour light |
-| tile-polo.jpg | 4:5 | Home "One polo, done properly" | The polo, clean product shot |
-| tile-course.jpg | 4:5 | Home gallery | After the round, clubhouse or dinner |
-| fabric-macro.jpg | 1:1 | Home gallery | The knit, macro |
-| hero.jpg | 16:9 | Home gallery | Wide course landscape |
+| hero.jpg | 16:9 (shoot wide) | Home hero | Polo worn on course, wide |
+| tile-polo.jpg | 4:5 | Home tile 01 | The polo, clean product shot |
+| tile-fabric.jpg | 4:5 | Home tile 02 | Fabric or knit detail |
+| tile-course.jpg | 4:5 | Home tile 03 | After the round, clubhouse or dinner |
+| fabric-macro.jpg | 1:1 | Home fabric section, product page | Piqué knit macro |
 | polo-2.jpg | 4:5 | Product page, image 1 | Polo flat lay, front |
 | polo-1.jpg | 4:5 | Product page, image 2 | Collar and placket detail |
 | polo-3.jpg | 4:5 | Product page, image 3 | On model, front |
+| polo-4.jpg | 4:5 | Product page, image 4 | Worn on course |
 | polo-6.jpg | 4:5 | Product page, image 5 | Lifestyle, after the round |
-| story-hero.jpg | 16:10 | Our Story | Founders or home course |
+| story-hero.jpg | 2:1 | Our Story banner | Founders or home course |
 | story-walk.jpg | 4:5 | Our Story | Walking the course |
-| story-knit.jpg | 4:5 | Our Story | Fiber or yarn detail |

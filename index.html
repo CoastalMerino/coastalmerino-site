@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/instrument-serif-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.min.css?v=c68f007f">
+<link rel="stylesheet" href="/assets/site.min.css?v=d5c102a9">
 <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/images/r/polo-4-480.webp 480w, /images/r/polo-4-800.webp 800w, /images/r/polo-4-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 46vw">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Coastal Merino","url":"https://coastalmerino.com","logo":"https://coastalmerino.com/apple-touch-icon.png","email":"hello@coastalmerino.com","sameAs":["https://www.instagram.com/coastalmerino"]}
@@ -33,223 +33,179 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<aside class="strip mono" aria-label="Announcement">First run in development · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></aside>
-
 <header class="site-header">
   <div class="bar">
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
     <a class="wordmark" href="/">Coastal Merino</a>
     <nav class="nav" aria-label="Main">
       <a href="/polo">The Polo</a>
-      <a href="/#merino">Why Merino</a>
-      <a href="/#trace">Traceability</a>
+      <a href="/#fabric">Fabric</a>
       <a href="/our-story">Our Story</a>
+      <a href="/our-story#standards">Standards</a>
       <a href="/faq">Help</a>
     </nav>
     <a class="btn join" href="#join">Join the list</a>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
     <a href="/polo">The Polo</a>
-    <a href="/#merino">Why Merino</a>
-    <a href="/#trace">Traceability</a>
+    <a href="/#fabric">Fabric</a>
     <a href="/our-story">Our Story</a>
+    <a href="/our-story#standards">Standards</a>
     <a href="/faq">Help &amp; FAQ</a>
     <a href="/size-guide">Size Guide</a>
   </nav>
 </header>
 
 <main id="main">
-  <section class="wrap hero">
+  <section class="hero">
+    <div class="photo" data-slot="hero" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" sizes="(max-width: 640px) 175vw, 100vw"><img src="/images/r/hero-1200.jpg" srcset="/images/r/hero-480.jpg 480w, /images/r/hero-800.jpg 800w, /images/r/hero-1200.jpg 1200w, /images/r/hero-1600.jpg 1600w, /images/r/hero-2400.jpg 2400w" sizes="(max-width: 640px) 175vw, 100vw" width="2400" height="1350" decoding="async" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></picture></div>
     <div class="hero-copy">
-      <p class="eyebrow mono">No. 01 · The Polo</p>
-      <h1 class="display">The merino polo.</h1>
-      <p class="lede">100% superfine merino, made for the course and the dinner after.</p>
-      <form class="signup-inline" data-kit data-note="hero-note" novalidate>
-        <label for="hero-email" class="hp">Email address</label>
-        <input id="hero-email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
-        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn" type="submit">Get first access</button>
-      </form>
-      <p class="note" id="hero-note" role="status" aria-live="polite"></p>
-      <ul class="specline mono" aria-label="At a glance">
-        <li>100% merino</li><li>Finer than 18 micron</li><li>0% synthetic</li>
-      </ul>
+      <p class="eyebrow label">No. 01 · The Polo</p>
+      <h1>The merino polo.</h1>
+      <p>100% superfine merino, made for the course and the dinner after.</p>
+      <a class="btn light" href="#join">Get first access</a>
     </div>
-    <figure class="hero-media">
-      <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/polo-4-480.webp 480w, /images/r/polo-4-800.webp 800w, /images/r/polo-4-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 46vw"><img src="/images/r/polo-4-1200.jpg" srcset="/images/r/polo-4-480.jpg 480w, /images/r/polo-4-800.jpg 800w, /images/r/polo-4-1200.jpg 1200w" sizes="(max-width: 900px) 100vw, 46vw" width="1200" height="1500" decoding="async" alt="A golfer finishing a swing at sunset" loading="eager" fetchpriority="high"></picture></div>
-      <figcaption class="caption mono"><span>Late light, the 18th</span><span>01</span></figcaption>
-    </figure>
   </section>
 
-  <section class="section bg-bone" aria-labelledby="spot-title">
-    <div class="wrap spot">
-      <figure>
-        <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-polo-480.webp 480w, /images/r/tile-polo-800.webp 800w, /images/r/tile-polo-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw"><img src="/images/r/tile-polo-1200.jpg" srcset="/images/r/tile-polo-480.jpg 480w, /images/r/tile-polo-800.jpg 800w, /images/r/tile-polo-1200.jpg 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="1500" decoding="async" alt="A polo laid flat" loading="lazy"></picture></div>
-      </figure>
-      <div class="spot-copy">
-        <p class="eyebrow mono">The first piece</p>
-        <h2 class="h2" id="spot-title">One polo, done properly.</h2>
-        <p class="lede">We're starting with a single shirt and making every part of it right: the fiber, the knit, the collar, the buttons. Everything else waits until this one is finished.</p>
-        <div class="scorecard" role="group" aria-label="The polo at a glance">
-          <div class="sc-title"><span>Scorecard</span><span>The Merino Polo</span></div>
-          <dl>
-            <div><dt>Fiber</dt><dd>100%<small>Merino wool</small></dd></div>
-            <div><dt>Micron</dt><dd>&lt;18<small>Superfine</small></dd></div>
-            <div><dt>Synthetics</dt><dd>0<small>None, anywhere</small></dd></div>
-            <div><dt>Collar</dt><dd>Sewn<small>Never glued</small></dd></div>
-            <div><dt>Wool</dt><dd>NZ<small>New Zealand</small></dd></div>
-          </dl>
-        </div>
-        <div class="actions"><a class="btn" href="/polo">See the polo <span class="arr" aria-hidden="true">&rarr;</span></a><a class="btn ghost" href="/size-guide">Size guide</a></div>
+  <section class="section" id="polo">
+    <div class="inner tiles">
+      <div class="tile">
+        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-polo-480.webp 480w, /images/r/tile-polo-800.webp 800w, /images/r/tile-polo-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-polo-1200.jpg" srcset="/images/r/tile-polo-480.jpg 480w, /images/r/tile-polo-800.jpg 800w, /images/r/tile-polo-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="A grey piqué polo laid flat" loading="lazy"></picture></div>
+        <span class="num label">01</span>
+        <h2>The Polo</h2>
+        <p>A classic piqué golf polo with a tailored fit and a sewn collar that holds its shape.</p>
+        <a class="more" href="/polo">View the polo <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="tile">
+        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-fabric-480.webp 480w, /images/r/tile-fabric-800.webp 800w, /images/r/tile-fabric-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-fabric-1200.jpg" srcset="/images/r/tile-fabric-480.jpg 480w, /images/r/tile-fabric-800.jpg 800w, /images/r/tile-fabric-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="Folded knitwear in cream, tan and gold" loading="lazy"></picture></div>
+        <span class="num label">02</span>
+        <h2>The Fabric</h2>
+        <p>Superfine New Zealand merino that breathes, resists odor, and keeps its shape.</p>
+        <a class="more" href="#fabric">About the fabric <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="tile">
+        <div class="photo" data-slot="tile-course" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-course-480.webp 480w, /images/r/tile-course-800.webp 800w, /images/r/tile-course-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-course-1200.jpg" srcset="/images/r/tile-course-480.jpg 480w, /images/r/tile-course-800.jpg 800w, /images/r/tile-course-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="A clubhouse lit up at night" loading="lazy"></picture></div>
+        <span class="num label">03</span>
+        <h2>Course to Dinner</h2>
+        <p>One polo for eighteen holes and the table afterward, with nothing to change into.</p>
+        <a class="more" href="/our-story">Our story <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="merino" aria-labelledby="merino-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow mono">Why merino</p>
-          <h2 class="h2" id="merino-title">Merino vs. polyester.</h2>
-        </div>
-        <p class="lede">Most golf polos are polyester and elastane. Here's what changes when the whole shirt is wool.</p>
-      </div>
-      <table class="versus">
-        <thead><tr><th scope="col"><span class="hp">Property</span></th><th scope="col" class="mono col-us">Merino</th><th scope="col" class="mono">Polyester</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Where it comes from</th><td class="us">Grown by sheep, renewed every year</td><td class="them">A plastic, made from petroleum</td></tr>
-          <tr><th scope="row">Odor</th><td class="us">Naturally resists odor</td><td class="them">Tends to hold onto odor after a sweaty round</td></tr>
-          <tr><th scope="row">Temperature</th><td class="us">Breathes when it's warm, insulates when it cools</td><td class="them">Built to wick sweat, not to regulate temperature</td></tr>
-          <tr><th scope="row">Feel</th><td class="us">Soft, matte, natural drape</td><td class="them">Slick synthetic finish</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <div class="statement">
+    <p>Golf apparel in <em>pure</em> merino, with <em>nothing</em> synthetic.</p>
+  </div>
 
-  <section class="section bg-kelp" aria-labelledby="day-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="mono" style="color:rgba(244,241,234,0.65)">One polo, the whole day</p>
-          <h2 class="h2" id="day-title">From the first tee to the last table.</h2>
-        </div>
-        <p class="lede">The reason it's merino: one shirt that works from a cold morning tee time to dinner, with nothing to change into.</p>
-      </div>
-      <ol class="day">
-        <li><span class="t mono">7:40 AM</span><h3>First tee</h3><p>Cool and damp. Merino holds warmth close while the fog burns off.</p></li>
-        <li><span class="t mono">11:15 AM</span><h3>The turn</h3><p>Sun's out. The wool breathes and moves moisture off your skin.</p></li>
-        <li><span class="t mono">2:30 PM</span><h3>Eighteenth green</h3><p>Four hours in, and it still doesn't smell like four hours.</p></li>
-        <li><span class="t mono">7:30 PM</span><h3>Dinner</h3><p>Straight from the car. It held its shape in the bag, so you're set.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section" aria-label="Gallery">
-    <div class="wrap collage">
-      <figure class="c1">
-        <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-course-480.webp 480w, /images/r/tile-course-800.webp 800w, /images/r/tile-course-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 48vw"><img src="/images/r/tile-course-1200.jpg" srcset="/images/r/tile-course-480.jpg 480w, /images/r/tile-course-800.jpg 800w, /images/r/tile-course-1200.jpg 1200w" sizes="(max-width: 760px) 100vw, 48vw" width="1200" height="1500" decoding="async" alt="A clubhouse lit up at night" loading="lazy"></picture></div>
-        <figcaption class="caption mono"><span>After the round</span><span>02</span></figcaption>
-      </figure>
-      <figure class="c2">
-        <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/fabric-macro-480.webp 480w, /images/r/fabric-macro-800.webp 800w, /images/r/fabric-macro-1200.webp 1200w, /images/r/fabric-macro-1400.webp 1400w" sizes="(max-width: 760px) 70vw, 30vw"><img src="/images/r/fabric-macro-1200.jpg" srcset="/images/r/fabric-macro-480.jpg 480w, /images/r/fabric-macro-800.jpg 800w, /images/r/fabric-macro-1200.jpg 1200w, /images/r/fabric-macro-1400.jpg 1400w" sizes="(max-width: 760px) 70vw, 30vw" width="1400" height="1400" decoding="async" alt="Close-up of a fine knit" loading="lazy"></picture></div>
-        <figcaption class="caption mono"><span>The knit, up close</span><span>03</span></figcaption>
-      </figure>
-      <div class="quote"><p>Golf apparel in <em>pure</em> merino, with <em>nothing</em> synthetic.</p></div>
-      <figure class="c3">
-        <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" sizes="(max-width: 760px) 100vw, 58vw"><img src="/images/r/hero-1200.jpg" srcset="/images/r/hero-480.jpg 480w, /images/r/hero-800.jpg 800w, /images/r/hero-1200.jpg 1200w, /images/r/hero-1600.jpg 1600w, /images/r/hero-2400.jpg 2400w" sizes="(max-width: 760px) 100vw, 58vw" width="2400" height="1350" decoding="async" alt="Golf course fairway at dusk" loading="lazy"></picture></div>
-        <figcaption class="caption mono"><span>Morning fog on the fairway</span><span>04</span></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="section bg-white" id="trace" aria-labelledby="trace-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow mono">Traceability</p>
-          <h2 class="h2" id="trace-title">From the sheep to the stitch.</h2>
-        </div>
-        <p class="lede">Before the first polo ships, we'll publish every step and every partner that touches it. Here's where that stands today.</p>
-      </div>
-      <ol class="trace">
-        <li><span class="n mono">01 · Fiber</span><h3>Wool</h3><span class="where">New Zealand</span><p class="muted">Superfine merino, finer than 18 micron.</p></li>
-        <li><span class="n mono">02 · Yarn</span><h3>Spinning</h3><span class="where pending">Published before launch</span><p class="muted">Where the fiber becomes yarn.</p></li>
-        <li><span class="n mono">03 · Fabric</span><h3>Knitting</h3><span class="where pending">Published before launch</span><p class="muted">Where the yarn becomes the fabric.</p></li>
-        <li><span class="n mono">04 · Polo</span><h3>Sewing</h3><span class="where pending">Published before launch</span><p class="muted">Where every polo is cut and sewn.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="note-title">
-    <div class="wrap note-block">
+  <section class="section fabric" id="fabric">
+    <div class="inner split">
+      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/fabric-macro-480.webp 480w, /images/r/fabric-macro-800.webp 800w, /images/r/fabric-macro-1200.webp 1200w, /images/r/fabric-macro-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw"><img src="/images/r/fabric-macro-1200.jpg" srcset="/images/r/fabric-macro-480.jpg 480w, /images/r/fabric-macro-800.jpg 800w, /images/r/fabric-macro-1200.jpg 1200w, /images/r/fabric-macro-1400.jpg 1400w" sizes="(max-width: 860px) 100vw, 50vw" width="1400" height="1400" decoding="async" alt="Close-up of a fine knit" loading="lazy"></picture></div>
       <div>
-        <p class="eyebrow mono" id="note-title">Why we made it</p>
-      </div>
-      <div>
-        <blockquote>
-          <p>I couldn't find a golf polo without polyester in it. Everything on the rack was synthetic, and the natural options weren't built for a real round. So we made one.</p>
-        </blockquote>
-        <p class="sign mono">Jack Basseer, co-founder</p>
-        <p style="margin-top:28px"><a class="link" href="/our-story">Read our story</a></p>
+        <p class="kicker label">The fabric</p>
+        <h2 class="h2">Superfine merino, built for eighteen holes and what comes after.</h2>
+        <p>Knit from New Zealand merino finer than 18 micron, in a classic piqué.</p>
+        <div class="benefits">
+          <div><h3>Feel</h3><p>Smooth, soft, and light on the skin.</p></div>
+          <div><h3>Temperature</h3><p>Cool on a warm afternoon round, comfortable when the marine layer rolls in.</p></div>
+          <div><h3>Odor resistance</h3><p>Still fresh when you sit down for dinner.</p></div>
+          <div><h3>Wrinkle resistance</h3><p>Holds its shape in a golf bag, a carry-on, or a long day.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section rule-top" aria-labelledby="rules-title">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="eyebrow mono">Our standards</p>
-          <h2 class="h2" id="rules-title">Four rules for every polo.</h2>
-        </div>
+  <section class="section standards" id="standards">
+    <div class="inner">
+      <p class="kicker label center">Our standards</p>
+      <h2 class="h2 center">What goes into every polo, and what never does.</h2>
+      <div class="std">
+        <div><h3>100% merino</h3><p>Every fiber in the fabric is merino wool. No blends.</p></div>
+        <div><h3>Nothing synthetic</h3><p>No polyester, nylon, or elastane anywhere in the fabric.</p></div>
+        <div><h3>No glued collar</h3><p>Sewn with a woven interlining instead of fused with adhesive, so it holds its shape wash after wash.</p></div>
+        <div><h3>Full sourcing</h3><p>Before launch we'll publish where the wool is grown, where it's knit, and where every polo is sewn.</p></div>
       </div>
-      <ol class="rules">
-        <li><h3>100% merino</h3><p>Every fiber in the fabric is merino wool. No blends.</p></li>
-        <li><h3>Nothing synthetic</h3><p>No polyester, nylon, or elastane anywhere in the fabric.</p></li>
-        <li><h3>No glued collar</h3><p>Sewn with a woven interlining instead of fused with adhesive, so it holds its shape wash after wash.</p></li>
-        <li><h3>Full sourcing</h3><p>Before launch we'll publish where the wool is grown, where it's knit, and where every polo is sewn.</p></li>
-      </ol>
+    </div>
+  </section>
+
+  <section class="section founder" id="story">
+    <div class="inner">
+      <p class="kicker label">Why we made it</p>
+      <blockquote>
+        <p>I couldn't find a golf polo without polyester in it. Everything on the rack was synthetic, and the natural options weren't built for a real round. So we made one.</p>
+        <p>I grew up in Northern California, played baseball at USC, and keep synthetics out of my life wherever I can. Merino breathes, resists odor, and moves with you. It should be the standard fabric in golf, and this polo is where we start.</p>
+      </blockquote>
+      <p class="sign label">Jack Basseer, co-founder</p>
+      <p style="margin-top:30px"><a class="btn" href="/our-story">Read our story</a></p>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="inner">
+      <p class="kicker label center">Questions</p>
+      <h2 class="h2 center">Before you tee off</h2>
+      <details>
+        <summary>When does the first polo launch?</summary>
+        <p>We're finalizing our first production run now. Join the list and you'll hear first, before anything goes on sale.</p>
+      </details>
+      <details>
+        <summary>Won't wool be too hot for summer golf?</summary>
+        <p>Superfine merino is lighter and more breathable than most people expect. It moves heat and moisture away from your skin, so it stays comfortable on a warm afternoon and doesn't turn cold and clammy when the weather shifts.</p>
+      </details>
+      <details>
+        <summary>How does it fit?</summary>
+        <p>A classic, tailored golf fit: clean through the body, with room to swing. Full measurements will be in our <a href="/size-guide">size guide</a> at launch.</p>
+      </details>
+      <details>
+        <summary>Where is it made?</summary>
+        <p>Our wool is New Zealand merino. We're finalizing our mill and sewing partners now, and before launch we'll share exactly where every polo is made, from the wool to the final stitch.</p>
+      </details>
+      <details>
+        <summary>How do I care for it?</summary>
+        <p>Merino resists odor, so it needs washing less often than a synthetic polo. Full care instructions come with every polo.</p>
+      </details>
+      <details>
+        <summary>Can my club's pro shop carry Coastal Merino?</summary>
+        <p>We'd like to hear from you. Golf professionals and buyers can reach us at <a href="mailto:wholesale@coastalmerino.com">wholesale@coastalmerino.com</a>.</p>
+      </details>
+      <p class="center" style="margin-top:28px"><a class="label" href="/faq">More questions</a></p>
     </div>
   </section>
 </main>
 
 <footer class="footer" id="join">
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-join">
-        <h2>Hear about the first run.</h2>
-        <p>News on the first run, before anything goes on sale.</p>
-        <form class="signup-inline" data-kit data-note="note" novalidate>
-          <label for="email" class="hp">Email address</label>
-          <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
-          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn" type="submit">Join</button>
-        </form>
-        <p class="note" id="note" role="status" aria-live="polite"></p>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">Shop</h3>
-        <ul><li><a href="/polo">The Polo</a></li><li><a href="/size-guide">Size Guide</a></li><li><a href="/#merino">Why Merino</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">About</h3>
-        <ul><li><a href="/our-story">Our Story</a></li><li><a href="/#trace">Traceability</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">Help</h3>
-        <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns</a></li><li><a href="/faq#contact">Contact</a></li></ul>
-      </div>
+  <div class="inner">
+    <div class="join-col">
+      <h2>Hear about the first run.</h2>
+      <p>News on the first run, before anything goes on sale.</p>
+      <form id="signup" data-kit data-note="note" novalidate>
+        <label for="email" class="hp">Email address</label>
+        <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Join</button>
+      </form>
+      <p class="note" id="note" role="status" aria-live="polite"></p>
     </div>
-    <div class="legal mono">
-      <span>© 2026 Coastal Merino</span>
-      <a href="/privacy">Privacy</a>
+    <div class="col">
+      <h3 class="label">Shop</h3>
+      <ul><li><a href="/polo">The Polo</a></li><li><a href="/#fabric">The Fabric</a></li><li><a href="/size-guide">Size Guide</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">About</h3>
+      <ul><li><a href="/our-story">Our Story</a></li><li><a href="/our-story#standards">Our Standards</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">Help</h3>
+      <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns &amp; Exchanges</a></li><li><a href="/faq#contact">Contact</a></li></ul>
     </div>
   </div>
-  <div class="foot-mark" aria-hidden="true">Coastal Merino</div>
+  <div class="legal label">
+    <span>© 2026 Coastal Merino</span>
+    <a href="/privacy">Privacy</a>
+  </div>
 </footer>
 
-<script src="/assets/site.js?v=c68f007f" defer></script>
+<script src="/assets/site.js?v=d5c102a9" defer></script>
 </body>
 </html>

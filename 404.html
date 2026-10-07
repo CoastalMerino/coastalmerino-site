@@ -25,82 +25,77 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/instrument-serif-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-tight-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.min.css?v=c68f007f">
+<link rel="stylesheet" href="/assets/site.min.css?v=d5c102a9">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<aside class="strip mono" aria-label="Announcement">First run in development · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></aside>
-
 <header class="site-header">
   <div class="bar">
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
     <a class="wordmark" href="/">Coastal Merino</a>
     <nav class="nav" aria-label="Main">
       <a href="/polo">The Polo</a>
-      <a href="/#merino">Why Merino</a>
-      <a href="/#trace">Traceability</a>
+      <a href="/#fabric">Fabric</a>
       <a href="/our-story">Our Story</a>
+      <a href="/our-story#standards">Standards</a>
       <a href="/faq">Help</a>
     </nav>
     <a class="btn join" href="#join">Join the list</a>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
     <a href="/polo">The Polo</a>
-    <a href="/#merino">Why Merino</a>
-    <a href="/#trace">Traceability</a>
+    <a href="/#fabric">Fabric</a>
     <a href="/our-story">Our Story</a>
+    <a href="/our-story#standards">Standards</a>
     <a href="/faq">Help &amp; FAQ</a>
     <a href="/size-guide">Size Guide</a>
   </nav>
 </header>
 
 <main id="main">
-  <div class="wrap notfound">
-    <p class="eyebrow mono">404</p>
-    <h1 class="h1">Out of bounds.</h1>
-    <p class="lede">This page doesn't exist. It may have moved, or the link may be wrong.</p>
-    <p><a class="btn" href="/">Back to the homepage <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+  <div class="notfound">
+    <p class="label" style="color:var(--muted)">404</p>
+    <h1>This page doesn't exist.</h1>
+    <p style="color:var(--muted)">It may have moved, or the link may be wrong.</p>
+    <p><a class="btn" href="/">Go to the homepage</a></p>
   </div>
 </main>
 
 <footer class="footer" id="join">
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-join">
-        <h2>Hear about the first run.</h2>
-        <p>News on the first run, before anything goes on sale.</p>
-        <form class="signup-inline" data-kit data-note="note" novalidate>
-          <label for="email" class="hp">Email address</label>
-          <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
-          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button class="btn" type="submit">Join</button>
-        </form>
-        <p class="note" id="note" role="status" aria-live="polite"></p>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">Shop</h3>
-        <ul><li><a href="/polo">The Polo</a></li><li><a href="/size-guide">Size Guide</a></li><li><a href="/#merino">Why Merino</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">About</h3>
-        <ul><li><a href="/our-story">Our Story</a></li><li><a href="/#trace">Traceability</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
-      </div>
-      <div class="foot-col">
-        <h3 class="mono">Help</h3>
-        <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns</a></li><li><a href="/faq#contact">Contact</a></li></ul>
-      </div>
+  <div class="inner">
+    <div class="join-col">
+      <h2>Hear about the first run.</h2>
+      <p>News on the first run, before anything goes on sale.</p>
+      <form id="signup" data-kit data-note="note" novalidate>
+        <label for="email" class="hp">Email address</label>
+        <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Join</button>
+      </form>
+      <p class="note" id="note" role="status" aria-live="polite"></p>
     </div>
-    <div class="legal mono">
-      <span>© 2026 Coastal Merino</span>
-      <a href="/privacy">Privacy</a>
+    <div class="col">
+      <h3 class="label">Shop</h3>
+      <ul><li><a href="/polo">The Polo</a></li><li><a href="/#fabric">The Fabric</a></li><li><a href="/size-guide">Size Guide</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">About</h3>
+      <ul><li><a href="/our-story">Our Story</a></li><li><a href="/our-story#standards">Our Standards</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">Help</h3>
+      <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns &amp; Exchanges</a></li><li><a href="/faq#contact">Contact</a></li></ul>
     </div>
   </div>
-  <div class="foot-mark" aria-hidden="true">Coastal Merino</div>
+  <div class="legal label">
+    <span>© 2026 Coastal Merino</span>
+    <a href="/privacy">Privacy</a>
+  </div>
 </footer>
 
-<script src="/assets/site.js?v=c68f007f" defer></script>
+<script src="/assets/site.js?v=d5c102a9" defer></script>
 </body>
 </html>
