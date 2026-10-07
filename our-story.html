@@ -25,8 +25,8 @@
 <link rel="preload" href="/fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/eb-garamond-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jost-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=5826faef">
-<link rel="preload" as="image" type="image/webp" imagesrcset="/images/r/story-hero-480.webp 480w, /images/r/story-hero-800.webp 800w, /images/r/story-hero-1200.webp 1200w, /images/r/story-hero-1600.webp 1600w, /images/r/story-hero-2400.webp 2400w" imagesizes="100vw">
+<link rel="stylesheet" href="/assets/site.min.css?v=c9d6f2f0">
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/images/r/story-hero-480.webp 480w, /images/r/story-hero-800.webp 800w, /images/r/story-hero-1200.webp 1200w, /images/r/story-hero-1600.webp 1600w, /images/r/story-hero-2400.webp 2400w" imagesizes="(max-width: 640px) 200vw, 100vw">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://coastalmerino.com/"},{"@type":"ListItem","position":2,"name":"Our Story","item":"https://coastalmerino.com/our-story"}]}
 </script>
@@ -34,7 +34,7 @@
 <body>
 <a class="skip label" href="#main">Skip to content</a>
 
-<div class="announce label">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></div>
+<aside class="announce label" aria-label="Announcement">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></aside>
 
 <header class="site-header">
   <div class="bar">
@@ -63,7 +63,7 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/story-hero-480.webp 480w, /images/r/story-hero-800.webp 800w, /images/r/story-hero-1200.webp 1200w, /images/r/story-hero-1600.webp 1600w, /images/r/story-hero-2400.webp 2400w" sizes="100vw"><img src="/images/r/story-hero-1200.jpg" srcset="/images/r/story-hero-480.jpg 480w, /images/r/story-hero-800.jpg 800w, /images/r/story-hero-1200.jpg 1200w, /images/r/story-hero-1600.jpg 1600w, /images/r/story-hero-2400.jpg 2400w" sizes="100vw" width="2400" height="1200" decoding="async" alt="A golf course and clubhouse beside a pond" loading="eager" fetchpriority="high"></picture></div>
+    <div class="photo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/story-hero-480.webp 480w, /images/r/story-hero-800.webp 800w, /images/r/story-hero-1200.webp 1200w, /images/r/story-hero-1600.webp 1600w, /images/r/story-hero-2400.webp 2400w" sizes="(max-width: 640px) 200vw, 100vw"><img src="/images/r/story-hero-1200.jpg" srcset="/images/r/story-hero-480.jpg 480w, /images/r/story-hero-800.jpg 800w, /images/r/story-hero-1200.jpg 1200w, /images/r/story-hero-1600.jpg 1600w, /images/r/story-hero-2400.jpg 2400w" sizes="(max-width: 640px) 200vw, 100vw" width="2400" height="1200" decoding="async" alt="A golf course and clubhouse beside a pond" loading="eager" fetchpriority="high"></picture></div>
     <div class="copy">
       <p class="label">Our story</p>
       <h1>A golf polo with nothing synthetic in it.</h1>
@@ -163,6 +163,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js?v=5826faef" defer></script>
+<script src="/assets/site.js?v=c9d6f2f0" defer></script>
 </body>
 </html>

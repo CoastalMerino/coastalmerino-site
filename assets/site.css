@@ -230,8 +230,10 @@
     .gallery::-webkit-scrollbar { display: none; }
     .gallery .photo, .gallery .photo:first-child { flex: 0 0 100%; scroll-snap-align: start; aspect-ratio: 4 / 5; }
     .gallery-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
-    .gallery-dots button { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--navy); background: transparent; padding: 0; cursor: pointer; }
-    .gallery-dots button[aria-current="true"] { background: var(--navy); }
+    .gallery-dots { gap: 0; }
+    .gallery-dots button { width: 24px; height: 24px; border: 0; background: transparent; padding: 0; cursor: pointer; display: grid; place-items: center; }
+    .gallery-dots button::before { content: ""; width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--navy); }
+    .gallery-dots button[aria-current="true"]::before { background: var(--navy); }
   }
   .buybox { position: sticky; top: 110px; }
   @media (max-width: 960px) { .buybox { position: static; padding: 0 20px; } }

@@ -25,8 +25,8 @@
 <link rel="preload" href="/fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/eb-garamond-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jost-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=5826faef">
-<link rel="preload" as="image" type="image/webp" imagesrcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" imagesizes="100vw">
+<link rel="stylesheet" href="/assets/site.min.css?v=c9d6f2f0">
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" imagesizes="(max-width: 640px) 175vw, 100vw">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Coastal Merino","url":"https://coastalmerino.com","logo":"https://coastalmerino.com/apple-touch-icon.png","email":"hello@coastalmerino.com","sameAs":["https://www.instagram.com/coastalmerino"]}
 </script>
@@ -34,7 +34,7 @@
 <body>
 <a class="skip label" href="#main">Skip to content</a>
 
-<div class="announce label">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></div>
+<aside class="announce label" aria-label="Announcement">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></aside>
 
 <header class="site-header">
   <div class="bar">
@@ -63,7 +63,7 @@
 
 <main id="main">
   <section class="hero">
-    <div class="photo" data-slot="hero" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" sizes="100vw"><img src="/images/r/hero-1200.jpg" srcset="/images/r/hero-480.jpg 480w, /images/r/hero-800.jpg 800w, /images/r/hero-1200.jpg 1200w, /images/r/hero-1600.jpg 1600w, /images/r/hero-2400.jpg 2400w" sizes="100vw" width="2400" height="1350" decoding="async" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></picture></div>
+    <div class="photo" data-slot="hero" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" sizes="(max-width: 640px) 175vw, 100vw"><img src="/images/r/hero-1200.jpg" srcset="/images/r/hero-480.jpg 480w, /images/r/hero-800.jpg 800w, /images/r/hero-1200.jpg 1200w, /images/r/hero-1600.jpg 1600w, /images/r/hero-2400.jpg 2400w" sizes="(max-width: 640px) 175vw, 100vw" width="2400" height="1350" decoding="async" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></picture></div>
     <div class="hero-copy">
       <h1>The merino polo.</h1>
       <p>100% superfine merino, made for the course and the dinner after.</p>
@@ -74,19 +74,19 @@
   <section class="section" id="polo">
     <div class="inner tiles">
       <div class="tile">
-        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-polo-480.webp 480w, /images/r/tile-polo-800.webp 800w, /images/r/tile-polo-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-polo-1200.jpg" srcset="/images/r/tile-polo-480.jpg 480w, /images/r/tile-polo-800.jpg 800w, /images/r/tile-polo-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="A grey piqué polo laid flat" loading="lazy"></picture></div>
+        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-polo-480.webp 480w, /images/r/tile-polo-800.webp 800w, /images/r/tile-polo-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-polo-1200.jpg" srcset="/images/r/tile-polo-480.jpg 480w, /images/r/tile-polo-800.jpg 800w, /images/r/tile-polo-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="A grey piqué polo laid flat" loading="lazy"></picture></div>
         <h2>The Polo</h2>
         <p>A classic piqué golf polo with a tailored fit and a sewn collar that holds its shape.</p>
         <a class="btn" href="/polo">View the polo</a>
       </div>
       <div class="tile">
-        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-fabric-480.webp 480w, /images/r/tile-fabric-800.webp 800w, /images/r/tile-fabric-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-fabric-1200.jpg" srcset="/images/r/tile-fabric-480.jpg 480w, /images/r/tile-fabric-800.jpg 800w, /images/r/tile-fabric-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="Folded knitwear in cream, tan and gold" loading="lazy"></picture></div>
+        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-fabric-480.webp 480w, /images/r/tile-fabric-800.webp 800w, /images/r/tile-fabric-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-fabric-1200.jpg" srcset="/images/r/tile-fabric-480.jpg 480w, /images/r/tile-fabric-800.jpg 800w, /images/r/tile-fabric-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="Folded knitwear in cream, tan and gold" loading="lazy"></picture></div>
         <h2>The Fabric</h2>
         <p>Superfine New Zealand merino that breathes, resists odor, and keeps its shape.</p>
         <a class="btn" href="#fabric">Learn more</a>
       </div>
       <div class="tile">
-        <div class="photo" data-slot="tile-course" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-course-480.webp 480w, /images/r/tile-course-800.webp 800w, /images/r/tile-course-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-course-1200.jpg" srcset="/images/r/tile-course-480.jpg 480w, /images/r/tile-course-800.jpg 800w, /images/r/tile-course-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="A clubhouse lit up at night" loading="lazy"></picture></div>
+        <div class="photo" data-slot="tile-course" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-course-480.webp 480w, /images/r/tile-course-800.webp 800w, /images/r/tile-course-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 33vw"><img src="/images/r/tile-course-1200.jpg" srcset="/images/r/tile-course-480.jpg 480w, /images/r/tile-course-800.jpg 800w, /images/r/tile-course-1200.jpg 1200w" sizes="(max-width: 860px) 100vw, 33vw" width="1200" height="1500" decoding="async" alt="A clubhouse lit up at night" loading="lazy"></picture></div>
         <h2>Course to Dinner</h2>
         <p>One polo for eighteen holes and the table afterward, with nothing to change into.</p>
         <a class="btn" href="/our-story">Our story</a>
@@ -100,7 +100,7 @@
 
   <section class="section fabric" id="fabric">
     <div class="inner split">
-      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/fabric-macro-480.webp 480w, /images/r/fabric-macro-800.webp 800w, /images/r/fabric-macro-1200.webp 1200w, /images/r/fabric-macro-1400.webp 1400w" sizes="100vw"><img src="/images/r/fabric-macro-1200.jpg" srcset="/images/r/fabric-macro-480.jpg 480w, /images/r/fabric-macro-800.jpg 800w, /images/r/fabric-macro-1200.jpg 1200w, /images/r/fabric-macro-1400.jpg 1400w" sizes="100vw" width="1400" height="1400" decoding="async" alt="Close-up of a fine knit" loading="lazy"></picture></div>
+      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/fabric-macro-480.webp 480w, /images/r/fabric-macro-800.webp 800w, /images/r/fabric-macro-1200.webp 1200w, /images/r/fabric-macro-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw"><img src="/images/r/fabric-macro-1200.jpg" srcset="/images/r/fabric-macro-480.jpg 480w, /images/r/fabric-macro-800.jpg 800w, /images/r/fabric-macro-1200.jpg 1200w, /images/r/fabric-macro-1400.jpg 1400w" sizes="(max-width: 860px) 100vw, 50vw" width="1400" height="1400" decoding="async" alt="Close-up of a fine knit" loading="lazy"></picture></div>
       <div>
         <p class="kicker label">The fabric</p>
         <h2 class="h2">Superfine merino, built for eighteen holes and what comes after.</h2>
@@ -205,6 +205,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js?v=5826faef" defer></script>
+<script src="/assets/site.js?v=c9d6f2f0" defer></script>
 </body>
 </html>

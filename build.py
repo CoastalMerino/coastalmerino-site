@@ -44,7 +44,7 @@ PAGES = [
     dict(src="index.html", out="index.html", path="/", title="Coastal Merino",
          og_title="Coastal Merino",
          description="The 100% merino golf polo. Coming soon.",
-         jsonld=ORG_JSONLD, preload="hero.jpg"),
+         jsonld=ORG_JSONLD, preload="hero.jpg", preload_sizes="(max-width: 640px) 175vw, 100vw"),
     dict(src="polo.html", out="polo.html", path="/polo", title="The Merino Polo | Coastal Merino",
          og_title="The Merino Polo", og_type="product", cur="polo",
          description="A golf polo knit entirely from superfine New Zealand merino. Nothing synthetic. Coming soon.",
@@ -53,7 +53,7 @@ PAGES = [
     dict(src="our-story.html", out="our-story.html", path="/our-story", title="Our Story | Coastal Merino",
          og_title="Our Story", cur="story",
          description="Why we're making a golf polo from 100% merino, and the standards behind every one.",
-         jsonld=crumbs_jsonld([("Home", "/"), ("Our Story", "/our-story")]), preload="story-hero.jpg"),
+         jsonld=crumbs_jsonld([("Home", "/"), ("Our Story", "/our-story")]), preload="story-hero.jpg", preload_sizes="(max-width: 640px) 200vw, 100vw"),
     dict(src="faq.html", out="faq.html", path="/faq", title="Help & FAQ | Coastal Merino",
          og_title="Help & FAQ", cur="help",
          description="Answers about the Coastal Merino polo, the fabric, sizing, shipping, and returns.",
@@ -152,7 +152,20 @@ def faq_jsonld(body):
             % items)
 
 
+def minify_css():
+    css = read(ROOT, "assets", "site.css")
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{}:;,>])\s*", r"\1", css)
+    css = css.replace(";}", "}").strip()
+    # keep the space in "and (" for media queries
+    css = css.replace("and(", "and (")
+    with open(os.path.join(ROOT, "assets", "site.min.css"), "w", encoding="utf-8") as f:
+        f.write(css + "\n")
+
+
 def main():
+    minify_css()
     info = resize_all()
     version = hashlib.sha1((read(ROOT, "assets", "site.css") + read(ROOT, "assets", "site.js")).encode()).hexdigest()[:8]
     head, header, footer = partial("head"), partial("header"), partial("footer")
@@ -171,7 +184,7 @@ def main():
             n = p["preload"]
             w, h, widths = info[n]
             stem = n[:-4]
-            preload = ('<link rel="preload" as="image" type="image/webp" imagesrcset="%s" imagesizes="%s">\n'
+            preload = ('<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="%s" imagesizes="%s">\n'
                        % (", ".join("/images/r/%s-%d.webp %dw" % (stem, x, x) for x in widths), p.get("preload_sizes", "100vw")))
 
         cur = p.get("cur", "")
