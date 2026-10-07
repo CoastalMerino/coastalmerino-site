@@ -2,56 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#F4F0E8">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>
-  :root { --bg: #F4F0E8; --ink: #1F2A44; --muted: #6B6A64; --line: rgba(31, 42, 68, 0.18); }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
-  header, footer { padding: 28px 24px; text-align: center; }
-  .wordmark { font-size: 15px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; padding-left: 0.42em; color: inherit; text-decoration: none; }
-  main { flex: 1; width: 100%; max-width: 640px; margin: 0 auto; padding: 32px 24px 48px; }
-  h1 { font-size: 32px; font-weight: 400; margin-bottom: 8px; }
-  h2 { font-size: 17px; font-weight: 500; margin: 32px 0 8px; }
-  p, li { font-size: 16px; line-height: 1.7; color: var(--muted); }
-  ul { padding-left: 20px; }
-  a { color: var(--ink); }
-  .date { font-size: 14px; margin-bottom: 24px; }
-  footer { font-size: 13px; color: var(--muted); }
-  footer a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy | Coastal Merino</title>
 <meta name="description" content="How Coastal Merino handles your information.">
 <link rel="canonical" href="https://coastalmerino.com/privacy">
+<meta name="theme-color" content="#1B2540">
+<meta property="og:title" content="Privacy">
+<meta property="og:description" content="How Coastal Merino handles your information.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coastalmerino.com/privacy">
+<meta property="og:image" content="https://coastalmerino.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Coastal Merino">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy">
+<meta name="twitter:description" content="How Coastal Merino handles your information.">
+<meta name="twitter:image" content="https://coastalmerino.com/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/eb-garamond-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=5826faef">
 </head>
 <body>
-<header><a class="wordmark" href="/">Coastal Merino</a></header>
-<main>
-  <h1>Privacy</h1>
-  <p class="date">Last updated September 28, 2026</p>
+<a class="skip label" href="#main">Skip to content</a>
 
-  <p>This site is run by Coastal Merino in Los Angeles, California. This page explains what we collect and what we do with it.</p>
+<div class="announce label">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></div>
 
-  <h2>What we collect</h2>
-  <p>If you join our list, we collect the email address you enter. We don't use advertising cookies or tracking pixels on this site.</p>
+<header class="site-header">
+  <div class="bar">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <a class="wordmark" href="/">Coastal Merino</a>
+    <nav class="nav label" aria-label="Main">
+      <a href="/polo">The Polo</a>
+      <a href="/#fabric">Fabric</a>
+      <a href="/our-story">Our Story</a>
+      <a href="/our-story#standards">Standards</a>
+      <a href="/faq">Help</a>
+    </nav>
+    <a class="join label" href="#join">Join the list</a>
+  </div>
+  <nav class="mobile-nav label" id="mobile-nav" aria-label="Mobile" hidden>
+    <a href="/polo">The Polo</a>
+    <a href="/#fabric">Fabric</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/our-story#standards">Standards</a>
+    <a href="/faq">Help &amp; FAQ</a>
+    <a href="/size-guide">Size Guide</a>
+  </nav>
+</header>
 
-  <h2>How we use it</h2>
-  <p>We use your email to send updates about Coastal Merino, such as launch news and first access to new products. We don't sell or rent your information to anyone.</p>
+<main id="main">
+  <div class="page-title">
+    <h1>Privacy</h1>
+    <p class="meta-date">Last updated September 28, 2026</p>
+  </div>
 
-  <h2>Who handles it</h2>
-  <p>Our email list is stored with Kit, the service we use to send email. The site is hosted by Netlify, which keeps standard server logs. Both only process information on our behalf.</p>
+  <section class="section" style="padding-top:48px">
+    <div class="prose">
+      <p>This site is run by Coastal Merino in Los Angeles, California. This page explains what we collect and what we do with it.</p>
 
-  <h2>Your choices</h2>
-  <ul>
-    <li>Every email includes an unsubscribe link.</li>
-    <li>You can ask us to see, correct, or delete your information at any time, including under California law.</li>
-  </ul>
+      <h2>What we collect</h2>
+      <p>If you join our list, we collect the email address you enter. We don't use advertising cookies or tracking pixels on this site.</p>
 
-  <h2>Contact</h2>
-  <p>Email <a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a> with any question about your information.</p>
+      <h2>How we use it</h2>
+      <p>We use your email to send updates about Coastal Merino, such as launch news and first access to new products. We don't sell or rent your information to anyone.</p>
+
+      <h2>Who handles it</h2>
+      <p>Our email list is stored with Kit, the service we use to send email. The site is hosted by Netlify, which keeps standard server logs. Both only process information on our behalf.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>Every email includes an unsubscribe link.</li>
+        <li>You can ask us to see, correct, or delete your information at any time, including under California law.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a> with any question about your information.</p>
+    </div>
+  </section>
 </main>
-<footer><a href="/">Back to Coastal Merino</a></footer>
+
+<footer class="footer" id="join">
+  <div class="inner">
+    <div class="join-col">
+      <h2>Stay in touch</h2>
+      <p>Join the list for first access to our first run, before it goes on sale.</p>
+      <form id="signup" data-kit data-note="note" novalidate>
+        <label for="email" class="hp">Email address</label>
+        <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit">Join</button>
+      </form>
+      <p class="note" id="note" role="status" aria-live="polite"></p>
+    </div>
+    <div class="col">
+      <h3 class="label">Shop</h3>
+      <ul><li><a href="/polo">The Polo</a></li><li><a href="/#fabric">The Fabric</a></li><li><a href="/size-guide">Size Guide</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">About</h3>
+      <ul><li><a href="/our-story">Our Story</a></li><li><a href="/our-story#standards">Our Standards</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
+    </div>
+    <div class="col">
+      <h3 class="label">Help</h3>
+      <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns &amp; Exchanges</a></li><li><a href="/faq#contact">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="legal label">
+    <span>© 2026 Coastal Merino</span>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+
+<script src="/assets/site.js?v=5826faef" defer></script>
 </body>
 </html>

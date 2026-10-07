@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Coastal Merino</title>
 <meta name="description" content="The 100% merino golf polo. Coming soon.">
+<link rel="canonical" href="https://coastalmerino.com/">
+<meta name="theme-color" content="#1B2540">
 <meta property="og:title" content="Coastal Merino">
 <meta property="og:description" content="The 100% merino golf polo. Coming soon.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coastalmerino.com">
-<meta name="theme-color" content="#1B2540">
-<link rel="canonical" href="https://coastalmerino.com/">
 <meta property="og:image" content="https://coastalmerino.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,165 +22,48 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/eb-garamond-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=5826faef">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" imagesizes="100vw">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Coastal Merino","url":"https://coastalmerino.com","logo":"https://coastalmerino.com/apple-touch-icon.png","email":"hello@coastalmerino.com","sameAs":["https://www.instagram.com/coastalmerino"]}
 </script>
-<style>
-@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-500-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'EB Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/eb-garamond-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'EB Garamond';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/eb-garamond-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jost-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/jost-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-  :root {
-    --navy: #1B2540;
-    --navy-deep: #121A2F;
-    --paper: #FFFFFF;
-    --mist: #EEF0F4;
-    --sand: #E8E2D6;
-    --ink: #1B2540;
-    --muted: #5B6273;
-    --line: rgba(27, 37, 64, 0.16);
-    --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
-    --text: "EB Garamond", "Iowan Old Style", Georgia, serif;
-    --label: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { background: var(--paper); color: var(--ink); font: 18px/1.6 var(--text); -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
-  img { display: block; max-width: 100%; }
-  .label { font: 500 11px/1.4 var(--label); letter-spacing: 0.22em; text-transform: uppercase; }
-  .btn { display: inline-block; font: 500 11px/1 var(--label); letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; padding: 17px 30px; background: var(--navy); color: #fff; border: 1px solid var(--navy); cursor: pointer; }
-  .btn:hover { background: var(--navy-deep); }
-  .btn.light { background: #fff; color: var(--navy); border-color: #fff; }
-  .btn.light:hover { background: var(--mist); }
-  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
-
-  .announce { background: var(--navy); color: #fff; text-align: center; padding: 11px 16px; }
-  .announce a { text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
-
-  .site-header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
-  .bar { max-width: 1360px; margin: 0 auto; padding: 22px 32px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
-  .wordmark { font: 500 21px/1 var(--display); letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; white-space: nowrap; }
-  .nav { display: flex; gap: 30px; }
-  .nav a { text-decoration: none; }
-  .nav a:hover { border-bottom: 1px solid var(--navy); }
-  .bar .join { justify-self: end; text-decoration: none; }
-  .bar .join:hover { border-bottom: 1px solid var(--navy); }
-  @media (max-width: 860px) {
-    .bar { grid-template-columns: 1fr auto; padding: 18px 20px; }
-    .nav { display: none; }
-    .wordmark { font-size: 17px; letter-spacing: 0.2em; }
-  }
-
-  .photo { position: relative; overflow: hidden; background: var(--sand); max-width: 100%; }
-  .photo img { width: 100%; height: 100%; object-fit: cover; }
-  .photo.ph { background: repeating-linear-gradient(135deg, #E9E4D9 0 14px, #E2DCCF 14px 28px); }
-  .photo.ph .ph-tag { position: absolute; left: 16px; bottom: 16px; background: #fff; color: var(--muted); padding: 7px 10px; }
-
-  .hero { position: relative; min-height: 640px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
-  .hero .photo { position: absolute; inset: 0; }
-  .hero .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(18,26,47,0.38), rgba(18,26,47,0.52)); }
-  .hero .photo.ph { background: linear-gradient(rgba(18,26,47,0.55), rgba(18,26,47,0.55)), repeating-linear-gradient(135deg, #3A4560 0 14px, #34405A 14px 28px); }
-  .hero-copy { position: relative; padding: 96px 24px; max-width: 760px; }
-  .hero h1 { font: 500 clamp(44px, 7vw, 76px)/1.02 var(--display); letter-spacing: -0.01em; text-wrap: balance; }
-  .hero p { font-size: clamp(19px, 2.2vw, 24px); margin: 22px auto 34px; max-width: 34ch; }
-
-  .section { padding: 96px 32px; }
-  .inner { max-width: 1320px; margin: 0 auto; }
-  @media (max-width: 640px) { .section { padding: 72px 20px; } .hero { min-height: 560px; } }
-
-  .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-  @media (max-width: 860px) { .tiles { grid-template-columns: minmax(0, 1fr); gap: 56px; } }
-  .tile { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-  .tile .photo { width: 100%; aspect-ratio: 4 / 5; margin-bottom: 10px; }
-  .tile h2 { font: 500 32px/1.1 var(--display); }
-  .tile p { color: var(--muted); max-width: 34ch; }
-  .tile .btn { margin-top: 8px; }
-
-  .statement { text-align: center; padding: 40px 24px 96px; }
-  .statement p { font: 500 clamp(32px, 4.4vw, 52px)/1.15 var(--display); max-width: 22ch; margin: 0 auto; text-wrap: balance; }
-  .statement em { font-style: italic; }
-
-  .fabric { background: var(--mist); }
-  .split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
-  @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
-  .split .photo { aspect-ratio: 1 / 1; }
-  .kicker { color: var(--muted); margin-bottom: 14px; }
-  .h2 { font: 500 clamp(34px, 4vw, 46px)/1.1 var(--display); margin-bottom: 18px; text-wrap: balance; }
-  .benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 32px; margin-top: 30px; }
-  @media (max-width: 480px) { .benefits { grid-template-columns: minmax(0, 1fr); } }
-  .benefits h3 { font: 500 11px/1.4 var(--label); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 6px; }
-  .benefits p { font-size: 16px; color: var(--muted); }
-
-  .standards .std { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin-top: 44px; }
-  @media (max-width: 960px) { .standards .std { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 520px) { .standards .std { grid-template-columns: minmax(0, 1fr); } }
-  .std div { border-top: 1px solid var(--navy); padding-top: 18px; }
-  .std h3 { font: 500 26px/1.15 var(--display); margin-bottom: 8px; }
-  .std p { font-size: 16px; color: var(--muted); }
-  .center { text-align: center; }
-
-  .founder { border-top: 1px solid var(--line); }
-  .founder .inner { max-width: 660px; text-align: center; }
-  .founder blockquote p { font: 400 italic clamp(22px, 2.6vw, 27px)/1.5 var(--text); margin-bottom: 20px; }
-  .founder .sign { color: var(--muted); margin-top: 26px; }
-
-  .faq { border-top: 1px solid var(--line); }
-  .faq .inner { max-width: 760px; }
-  .faq details { border-bottom: 1px solid var(--line); }
-  .faq details:first-of-type { border-top: 1px solid var(--line); }
-  .faq summary { cursor: pointer; list-style: none; padding: 22px 36px 22px 0; font: 500 22px/1.3 var(--display); position: relative; }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font: 300 24px var(--label); color: var(--muted); }
-  .faq details[open] summary::after { content: "\2212"; }
-  .faq details p { color: var(--muted); padding: 0 36px 24px 0; font-size: 17px; }
-
-  .footer { background: var(--navy-deep); color: #fff; padding: 80px 32px 40px; }
-  .footer .inner { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 48px; }
-  @media (max-width: 860px) { .footer .inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .footer .join-col { grid-column: 1 / -1; } }
-  @media (max-width: 640px) { .footer { padding: 64px 20px 32px; } }
-  .footer h2 { font: 500 30px/1.1 var(--display); margin-bottom: 12px; }
-  .footer p { color: rgba(255,255,255,0.75); font-size: 16px; max-width: 38ch; }
-  .footer .col h3 { margin-bottom: 16px; color: rgba(255,255,255,0.6); }
-  .footer .col ul { list-style: none; display: grid; gap: 10px; font-size: 16px; }
-  .footer .col a { text-decoration: none; }
-  .footer .col a:hover { border-bottom: 1px solid #fff; }
-  #signup { display: flex; border-bottom: 1px solid rgba(255,255,255,0.6); max-width: 420px; margin-top: 22px; }
-  #signup input[type="email"] { flex: 1; min-width: 0; border: 0; background: transparent; color: #fff; font: 17px var(--text); padding: 14px 2px; outline: none; }
-  #signup input::placeholder { color: rgba(255,255,255,0.55); }
-  #signup button { border: 0; background: transparent; color: #fff; font: 500 11px/1 var(--label); letter-spacing: 0.24em; text-transform: uppercase; padding: 14px 2px 14px 16px; cursor: pointer; white-space: nowrap; }
-  #signup button:disabled { opacity: 0.5; cursor: default; }
-  .hp { position: absolute; left: -9999px; }
-  .note { font-size: 15px; color: rgba(255,255,255,0.75); margin-top: 12px; min-height: 22px; }
-  .legal { max-width: 1320px; margin: 64px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: rgba(255,255,255,0.55); }
-  .legal a { text-decoration: none; }
-</style>
 </head>
 <body>
+<a class="skip label" href="#main">Skip to content</a>
 
-<div class="announce label">First run coming soon · <a href="#join">Join the list for first access</a></div>
+<div class="announce label">First run coming soon · <a href="#join">Join the list<span class="hide-sm"> for first access</span></a></div>
 
 <header class="site-header">
   <div class="bar">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
     <a class="wordmark" href="/">Coastal Merino</a>
     <nav class="nav label" aria-label="Main">
-      <a href="#polo">The Polo</a>
-      <a href="#fabric">Fabric</a>
-      <a href="#standards">Standards</a>
-      <a href="#story">Our Story</a>
-      <a href="#faq">FAQ</a>
+      <a href="/polo">The Polo</a>
+      <a href="/#fabric">Fabric</a>
+      <a href="/our-story">Our Story</a>
+      <a href="/our-story#standards">Standards</a>
+      <a href="/faq">Help</a>
     </nav>
     <a class="join label" href="#join">Join the list</a>
   </div>
+  <nav class="mobile-nav label" id="mobile-nav" aria-label="Mobile" hidden>
+    <a href="/polo">The Polo</a>
+    <a href="/#fabric">Fabric</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/our-story#standards">Standards</a>
+    <a href="/faq">Help &amp; FAQ</a>
+    <a href="/size-guide">Size Guide</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
-    <!-- PHOTO SLOT: hero. Full-width, about 2400 x 1200. Replace this div's "ph" class and tag with <img src="/images/hero.jpg" alt="..."> -->
-    <div class="photo" data-slot="hero" data-stock="unsplash"><img src="/images/hero.jpg" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></div>
+    <div class="photo" data-slot="hero" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/hero-480.webp 480w, /images/r/hero-800.webp 800w, /images/r/hero-1200.webp 1200w, /images/r/hero-1600.webp 1600w, /images/r/hero-2400.webp 2400w" sizes="100vw"><img src="/images/r/hero-1200.jpg" srcset="/images/r/hero-480.jpg 480w, /images/r/hero-800.jpg 800w, /images/r/hero-1200.jpg 1200w, /images/r/hero-1600.jpg 1600w, /images/r/hero-2400.jpg 2400w" sizes="100vw" width="2400" height="1350" decoding="async" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></picture></div>
     <div class="hero-copy">
       <h1>The merino polo.</h1>
       <p>100% superfine merino, made for the course and the dinner after.</p>
@@ -191,25 +74,22 @@
   <section class="section" id="polo">
     <div class="inner tiles">
       <div class="tile">
-        <!-- PHOTO SLOT: tile-polo. Portrait 4:5, about 1200 x 1500 -->
-        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><img src="/images/tile-polo.jpg" alt="A grey piqué polo laid flat" loading="lazy"></div>
+        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-polo-480.webp 480w, /images/r/tile-polo-800.webp 800w, /images/r/tile-polo-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-polo-1200.jpg" srcset="/images/r/tile-polo-480.jpg 480w, /images/r/tile-polo-800.jpg 800w, /images/r/tile-polo-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="A grey piqué polo laid flat" loading="lazy"></picture></div>
         <h2>The Polo</h2>
         <p>A classic piqué golf polo with a tailored fit and a sewn collar that holds its shape.</p>
-        <a class="btn" href="#join">Get first access</a>
+        <a class="btn" href="/polo">View the polo</a>
       </div>
       <div class="tile">
-        <!-- PHOTO SLOT: tile-fabric. Portrait 4:5, close-up of the knit -->
-        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><img src="/images/tile-fabric.jpg" alt="Folded knitwear in cream, tan and gold" loading="lazy"></div>
+        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-fabric-480.webp 480w, /images/r/tile-fabric-800.webp 800w, /images/r/tile-fabric-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-fabric-1200.jpg" srcset="/images/r/tile-fabric-480.jpg 480w, /images/r/tile-fabric-800.jpg 800w, /images/r/tile-fabric-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="Folded knitwear in cream, tan and gold" loading="lazy"></picture></div>
         <h2>The Fabric</h2>
         <p>Superfine New Zealand merino that breathes, resists odor, and keeps its shape.</p>
         <a class="btn" href="#fabric">Learn more</a>
       </div>
       <div class="tile">
-        <!-- PHOTO SLOT: tile-course. Portrait 4:5, golfer wearing it after the round -->
-        <div class="photo" data-slot="tile-course" data-stock="unsplash"><img src="/images/tile-course.jpg" alt="A clubhouse lit up at night" loading="lazy"></div>
+        <div class="photo" data-slot="tile-course" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/tile-course-480.webp 480w, /images/r/tile-course-800.webp 800w, /images/r/tile-course-1200.webp 1200w" sizes="100vw"><img src="/images/r/tile-course-1200.jpg" srcset="/images/r/tile-course-480.jpg 480w, /images/r/tile-course-800.jpg 800w, /images/r/tile-course-1200.jpg 1200w" sizes="100vw" width="1200" height="1500" decoding="async" alt="A clubhouse lit up at night" loading="lazy"></picture></div>
         <h2>Course to Dinner</h2>
         <p>One polo for eighteen holes and the table afterward, with nothing to change into.</p>
-        <a class="btn" href="#story">Our story</a>
+        <a class="btn" href="/our-story">Our story</a>
       </div>
     </div>
   </section>
@@ -220,8 +100,7 @@
 
   <section class="section fabric" id="fabric">
     <div class="inner split">
-      <!-- PHOTO SLOT: fabric-macro. Square, about 1600 x 1600, piqué knit up close -->
-      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><img src="/images/fabric-macro.jpg" alt="Close-up of a fine knit" loading="lazy"></div>
+      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><picture><source type="image/webp" srcset="/images/r/fabric-macro-480.webp 480w, /images/r/fabric-macro-800.webp 800w, /images/r/fabric-macro-1200.webp 1200w, /images/r/fabric-macro-1400.webp 1400w" sizes="100vw"><img src="/images/r/fabric-macro-1200.jpg" srcset="/images/r/fabric-macro-480.jpg 480w, /images/r/fabric-macro-800.jpg 800w, /images/r/fabric-macro-1200.jpg 1200w, /images/r/fabric-macro-1400.jpg 1400w" sizes="100vw" width="1400" height="1400" decoding="async" alt="Close-up of a fine knit" loading="lazy"></picture></div>
       <div>
         <p class="kicker label">The fabric</p>
         <h2 class="h2">Superfine merino, built for eighteen holes and what comes after.</h2>
@@ -257,6 +136,7 @@
         <p>I grew up in Northern California, played baseball at USC, and keep synthetics out of my life wherever I can. Merino breathes, resists odor, and moves with you. It should be the standard fabric in golf, and this polo is where we start.</p>
       </blockquote>
       <p class="sign label">Jack Basseer, co-founder</p>
+      <p style="margin-top:30px"><a class="btn" href="/our-story">Read our story</a></p>
     </div>
   </section>
 
@@ -274,7 +154,7 @@
       </details>
       <details>
         <summary>How does it fit?</summary>
-        <p>A classic, tailored golf fit: clean through the body, with room to swing. Full size details come with launch.</p>
+        <p>A classic, tailored golf fit: clean through the body, with room to swing. Full measurements will be in our <a href="/size-guide">size guide</a> at launch.</p>
       </details>
       <details>
         <summary>Where is it made?</summary>
@@ -288,6 +168,7 @@
         <summary>Can my club's pro shop carry Coastal Merino?</summary>
         <p>We'd like to hear from you. Golf professionals and buyers can reach us at <a href="mailto:wholesale@coastalmerino.com">wholesale@coastalmerino.com</a>.</p>
       </details>
+      <p class="center" style="margin-top:28px"><a class="label" href="/faq">More questions</a></p>
     </div>
   </section>
 </main>
@@ -297,7 +178,7 @@
     <div class="join-col">
       <h2>Stay in touch</h2>
       <p>Join the list for first access to our first run, before it goes on sale.</p>
-      <form id="signup" novalidate>
+      <form id="signup" data-kit data-note="note" novalidate>
         <label for="email" class="hp">Email address</label>
         <input id="email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
         <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -307,15 +188,15 @@
     </div>
     <div class="col">
       <h3 class="label">Shop</h3>
-      <ul><li><a href="#polo">The Polo</a></li><li><a href="#fabric">The Fabric</a></li></ul>
+      <ul><li><a href="/polo">The Polo</a></li><li><a href="/#fabric">The Fabric</a></li><li><a href="/size-guide">Size Guide</a></li></ul>
     </div>
     <div class="col">
       <h3 class="label">About</h3>
-      <ul><li><a href="#story">Our Story</a></li><li><a href="#standards">Our Standards</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
+      <ul><li><a href="/our-story">Our Story</a></li><li><a href="/our-story#standards">Our Standards</a></li><li><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">Instagram</a></li></ul>
     </div>
     <div class="col">
       <h3 class="label">Help</h3>
-      <ul><li><a href="#faq">FAQ</a></li><li><a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a></li><li><a href="mailto:wholesale@coastalmerino.com">Wholesale</a></li></ul>
+      <ul><li><a href="/faq">FAQ</a></li><li><a href="/shipping">Shipping</a></li><li><a href="/returns">Returns &amp; Exchanges</a></li><li><a href="/faq#contact">Contact</a></li></ul>
     </div>
   </div>
   <div class="legal label">
@@ -324,46 +205,6 @@
   </div>
 </footer>
 
-<script>
-  var KIT_FORM_ID = "9974631";
-
-  var form = document.getElementById("signup");
-  var note = document.getElementById("note");
-  var btn = form.querySelector("button");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var email = form.email_address.value.trim();
-    note.className = "note";
-
-    if (form.company.value) return;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      note.textContent = "Enter a valid email address.";
-      return;
-    }
-
-    btn.disabled = true;
-    note.textContent = "";
-
-    var data = new FormData();
-    data.append("email_address", email);
-
-    fetch("https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
-      method: "POST",
-      body: data,
-      headers: { "Accept": "application/json" }
-    })
-      .then(function (r) { if (!r.ok) throw new Error(); })
-      .then(function () {
-        form.reset();
-        note.className = "note ok";
-        note.textContent = "You're on the list.";
-      })
-      .catch(function () {
-        note.textContent = "Something went wrong. Email us at hello@coastalmerino.com.";
-      })
-      .finally(function () { btn.disabled = false; });
-  });
-</script>
+<script src="/assets/site.js?v=5826faef" defer></script>
 </body>
 </html>

@@ -1,0 +1,159 @@
+  <nav class="crumbs label" aria-label="Breadcrumb">
+    <ol><li><a href="/">Home</a></li><li aria-current="page">The Merino Polo</li></ol>
+  </nav>
+
+  <div class="pdp">
+    <div>
+      <div class="gallery" aria-label="Product images">
+        <div class="photo" data-stock="unsplash"><img src="/images/polo-2.jpg" alt="A grey polo laid flat" loading="eager" fetchpriority="high" sizes="(max-width: 960px) 100vw, 56vw"></div>
+        <div class="photo" data-stock="unsplash"><img src="/images/polo-1.jpg" alt="Collar and placket of a grey piqué polo" sizes="(max-width: 960px) 100vw, 28vw"></div>
+        <div class="photo" data-stock="unsplash"><img src="/images/polo-3.jpg" alt="A man wearing a dark polo" sizes="(max-width: 960px) 100vw, 28vw"></div>
+        <div class="photo" data-stock="unsplash"><img src="/images/polo-4.jpg" alt="A golfer finishing a swing at sunset" sizes="(max-width: 960px) 100vw, 28vw"></div>
+        <div class="photo" data-stock="unsplash"><img src="/images/polo-6.jpg" alt="Three golfers sharing a drink after the round" sizes="(max-width: 960px) 100vw, 28vw"></div>
+      </div>
+      <div class="gallery-dots" aria-label="Choose image"></div>
+    </div>
+
+    <div class="buybox">
+      <h1>The Merino Polo</h1>
+      <p class="price">Price announced at launch</p>
+
+      <div class="opt">
+        <div class="opt-label label">Color: <span class="val" id="color-val">Navy</span><span class="tbd" title="Colorways not final">Colors TBD</span></div>
+        <div class="swatches" data-toggle-group data-output="color-val" role="group" aria-label="Color">
+          <button type="button" class="swatch" style="background:#1B2540" data-value="Navy" aria-label="Navy" aria-pressed="true"></button>
+          <button type="button" class="swatch" style="background:#F7F5F0" data-value="White" aria-label="White" aria-pressed="false"></button>
+          <button type="button" class="swatch" style="background:#9A9C9E" data-value="Heather Grey" aria-label="Heather Grey" aria-pressed="false"></button>
+        </div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-label label">Size: <span class="val" id="size-val">Select a size</span><span class="tbd" title="Size run not final">Sizes TBD</span></div>
+        <div class="sizes" data-toggle-group data-output="size-val" role="group" aria-label="Size">
+          <button type="button" class="size" data-value="S" aria-pressed="false">S</button>
+          <button type="button" class="size" data-value="M" aria-pressed="false">M</button>
+          <button type="button" class="size" data-value="L" aria-pressed="false">L</button>
+          <button type="button" class="size" data-value="XL" aria-pressed="false">XL</button>
+          <button type="button" class="size" data-value="XXL" aria-pressed="false">XXL</button>
+        </div>
+        <a class="size-link label" href="/size-guide">What's my size?</a>
+      </div>
+
+      <div class="buy">
+        <button class="btn" type="button" data-focus-email="pdp-form">Get first access</button>
+        <form class="pdp-signup" id="pdp-form" data-kit data-note="pdp-note" novalidate hidden>
+          <label for="pdp-email" class="hp">Email address</label>
+          <input id="pdp-email" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <p class="pdp-note" id="pdp-note" role="status" aria-live="polite"></p>
+        <p class="buy-note">Not on sale yet. Join the list and you'll hear first, before the first run goes on sale.</p>
+      </div>
+
+      <div class="features" aria-label="Features">
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 20c3-1 4-5 7-5s4 4 7 4 4-3 6-4"/><path d="M6 14c3-1 4-5 7-5s4 4 7 4 4-3 6-4"/><path d="M6 26c3-1 4-5 7-5s4 4 7 4 4-3 6-4"/></svg>
+          <span>100% Merino</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 24c-3-3-3-7 0-10M16 26c-3-4-3-10 0-16M22 24c3-3 3-7 0-10"/><path d="M16 6v4M13 8l3-3 3 3"/></svg>
+          <span>Breathable</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M14 6a2 2 0 0 1 4 0v13a5 5 0 1 1-4 0z"/><path d="M16 12v9"/><path d="M23 9h4M23 13h3"/></svg>
+          <span>Temperature regulating</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 13c0-5 4-8 8-8s8 3 8 8c0 7-8 14-8 14S8 20 8 13z"/><path d="M12 14l3 3 5-6"/></svg>
+          <span>Odor resistant</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M11 6l-6 4 3 4 3-2v14h10V12l3 2 3-4-6-4c-1 2-3 3-5 3s-4-1-5-3z"/></svg>
+          <span>Wrinkle resistant</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M9 9l14 14"/></svg>
+          <span>Nothing synthetic</span>
+        </div>
+      </div>
+
+      <div class="acc">
+        <details open>
+          <summary>Description</summary>
+          <div class="body">
+            <p>A classic golf polo knit entirely from superfine New Zealand merino. It breathes on a warm afternoon round, resists odor through dinner, and keeps its shape in a golf bag or a carry-on. Finished with a sewn self-fabric collar that holds its shape without glue.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Fabric &amp; Care</summary>
+          <div class="body">
+            <ul>
+              <li>100% merino wool</li>
+              <li>Superfine New Zealand merino, finer than 18 micron</li>
+              <li>Classic piqué knit <span class="tbd">Confirm knit</span></li>
+              <li>No polyester, nylon, or elastane</li>
+            </ul>
+            <p>Care instructions <span class="tbd">TBD</span></p>
+          </div>
+        </details>
+        <details>
+          <summary>Fit</summary>
+          <div class="body">
+            <p>A classic, tailored golf fit: clean through the body, with room to swing.</p>
+            <p>Model measurements and size worn <span class="tbd">TBD</span></p>
+            <p><a href="/size-guide">See the size guide</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>Construction</summary>
+          <div class="body">
+            <ul>
+              <li>Self-fabric collar with a sewn-in woven interlining, no glue or fusing</li>
+              <li>Corozo buttons</li>
+              <li>Mercerized cotton thread</li>
+              <li>Removable collar stays</li>
+            </ul>
+            <p><span class="tbd">Confirm trims with factory</span></p>
+          </div>
+        </details>
+        <details>
+          <summary>Perfect For</summary>
+          <div class="body">
+            <ul>
+              <li>Walking eighteen holes on a warm afternoon</li>
+              <li>Going straight from the last putt to dinner</li>
+              <li>Travel days, packed in a carry-on</li>
+              <li>Players who want natural fiber next to their skin</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>Shipping &amp; Returns</summary>
+          <div class="body">
+            <p>Details will be posted before launch. See <a href="/shipping">shipping</a> and <a href="/returns">returns &amp; exchanges</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <section class="section pdp-band">
+    <div class="inner split">
+      <div class="photo" data-stock="unsplash"><img src="/images/fabric-macro.jpg" alt="Close-up of a fine knit" sizes="(max-width: 860px) 100vw, 50vw"></div>
+      <div>
+        <p class="kicker label">Why merino</p>
+        <h2 class="h2">The fabric does the work, so you don't think about it.</h2>
+        <p>Most golf polos are polyester and elastane. Ours is wool and nothing else. Merino moves heat and moisture away from your skin, resists odor, and springs back into shape, which is everything a performance polo is supposed to do.</p>
+        <p style="margin-top:22px"><a class="btn" href="/#fabric">More on the fabric</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section standards" id="standards">
+    <div class="inner">
+      <p class="kicker label center">Our standards</p>
+      <h2 class="h2 center">What goes into every polo, and what never does.</h2>
+{{> standards}}
+    </div>
+  </section>
