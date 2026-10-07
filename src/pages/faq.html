@@ -1,69 +1,76 @@
-  <div class="page-title">
-    <h1>Help &amp; FAQ</h1>
-    <p>Questions about the polo, the fabric, or an order. If you don't see your answer, write to us.</p>
+  <div class="wrap">
+    <header class="page-head">
+      <div>
+        <p class="eyebrow mono">Help</p>
+        <h1 class="h1" style="margin-top:18px">Questions, answered.</h1>
+      </div>
+      <p class="lede">About the polo, the fabric, or an order. If you don't see your answer, write to us.</p>
+    </header>
+
+    <nav class="help-links section tight" aria-label="Help topics">
+      <a href="/shipping"><span class="mono muted">01</span><span><span class="h">Shipping</span><br><span class="d">Where we ship and how long it takes.</span></span></a>
+      <a href="/returns"><span class="mono muted">02</span><span><span class="h">Returns</span><br><span class="d">How to send something back.</span></span></a>
+      <a href="/size-guide"><span class="mono muted">03</span><span><span class="h">Size Guide</span><br><span class="d">Find your size before you order.</span></span></a>
+      <a href="#contact"><span class="mono muted">04</span><span><span class="h">Contact</span><br><span class="d">Write to a real person.</span></span></a>
+    </nav>
+
+    <section class="faq-group">
+      <h2>The polo</h2>
+      <div class="qa">
+{{> faq-core}}
+      </div>
+    </section>
+
+    <section class="faq-group">
+      <h2>The fabric</h2>
+      <div class="qa">
+        <details>
+          <summary>Is merino itchy?</summary>
+          <p>Itch comes from coarse fibers. Superfine merino is far finer than the wool in a traditional sweater. Ours is finer than 18 micron, which is why it feels smooth against bare skin.</p>
+        </details>
+        <details>
+          <summary>Will it keep me warm on a cold morning?</summary>
+          <p>Merino insulates when it's cool and breathes when it warms up, so it works from an early tee time through the afternoon. On colder days, wear it under a sweater or quarter zip.</p>
+        </details>
+        <details>
+          <summary>Why no synthetics at all?</summary>
+          <p>Most performance polos are polyester and elastane. Merino already breathes, wicks moisture, resists odor, and holds its shape, so we don't blend in anything else.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="faq-group">
+      <h2>Orders</h2>
+      <div class="qa">
+        <details>
+          <summary>Where do you ship?</summary>
+          <p>We'll post full shipping details before launch. See our <a href="/shipping">shipping page</a>.</p>
+        </details>
+        <details>
+          <summary>Can I return or exchange my polo?</summary>
+          <p>We'll post our full returns and exchanges policy before launch. See our <a href="/returns">returns page</a>.</p>
+        </details>
+        <details>
+          <summary>How do I know my size?</summary>
+          <p>Our <a href="/size-guide">size guide</a> shows how to measure and which size to choose. If you're between sizes, email us and we'll help.</p>
+        </details>
+      </div>
+    </section>
   </div>
 
-  <section class="section" style="padding-top:48px">
-    <nav class="help-links" aria-label="Help topics">
-      <a href="/shipping"><span class="h">Shipping</span><span>Where we ship and how long it takes.</span></a>
-      <a href="/returns"><span class="h">Returns &amp; Exchanges</span><span>How to send something back.</span></a>
-      <a href="/size-guide"><span class="h">Size Guide</span><span>Find your size before you order.</span></a>
-      <a href="#contact"><span class="h">Contact</span><span>Write to a real person.</span></a>
-    </nav>
-  </section>
-
-  <section class="section faq" style="padding-top:64px">
-    <div class="inner">
-      <h2 class="h2 center">The polo</h2>
-{{> faq-core}}
-    </div>
-  </section>
-
-  <section class="section faq">
-    <div class="inner">
-      <h2 class="h2 center">The fabric</h2>
-      <details>
-        <summary>Is merino itchy?</summary>
-        <p>Itch comes from coarse fibers. Superfine merino is far finer than the wool in a traditional sweater. Ours is finer than 18 micron, which is why it feels smooth against bare skin.</p>
-      </details>
-      <details>
-        <summary>Will it keep me warm on a cold morning?</summary>
-        <p>Merino insulates when it's cool and breathes when it warms up, so it works from an early tee time through the afternoon. On colder days, wear it under a sweater or quarter zip.</p>
-      </details>
-      <details>
-        <summary>Why no synthetics at all?</summary>
-        <p>Most performance polos are polyester and elastane. Merino already breathes, wicks moisture, resists odor, and holds its shape, so we don't blend in anything else.</p>
-      </details>
-    </div>
-  </section>
-
-  <section class="section faq">
-    <div class="inner">
-      <h2 class="h2 center">Orders</h2>
-      <details>
-        <summary>Where do you ship?</summary>
-        <p>We'll post full shipping details before launch. See our <a href="/shipping">shipping page</a>.</p>
-      </details>
-      <details>
-        <summary>Can I return or exchange my polo?</summary>
-        <p>We'll post our full returns and exchanges policy before launch. See our <a href="/returns">returns page</a>.</p>
-      </details>
-      <details>
-        <summary>How do I know my size?</summary>
-        <p>Our <a href="/size-guide">size guide</a> shows how to measure and which size to choose. If you're between sizes, email us and we'll help.</p>
-      </details>
-    </div>
-  </section>
-
-  <section class="section fabric" id="contact">
-    <div class="inner">
-      <p class="kicker label center">Contact</p>
-      <h2 class="h2 center">Write to us.</h2>
-      <p class="center" style="color:var(--muted);margin-bottom:44px">We read every email.</p>
-      <div class="contact-grid">
-        <div><h3 class="label">General</h3><p><a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a></p></div>
-        <div><h3 class="label">Wholesale</h3><p><a href="mailto:wholesale@coastalmerino.com">wholesale@coastalmerino.com</a></p></div>
-        <div><h3 class="label">Instagram</h3><p><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">@coastalmerino</a></p></div>
+  <section class="section bg-bone" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow mono">Contact</p>
+          <h2 class="h2" id="contact-title" style="margin-top:14px">Write to us.</h2>
+        </div>
+        <p class="lede">We read every email.</p>
+      </div>
+      <div class="contact">
+        <div><h3 class="mono">General</h3><p><a href="mailto:hello@coastalmerino.com">hello@coastalmerino.com</a></p></div>
+        <div><h3 class="mono">Wholesale</h3><p><a href="mailto:wholesale@coastalmerino.com">wholesale@coastalmerino.com</a></p></div>
+        <div><h3 class="mono">Instagram</h3><p><a href="https://www.instagram.com/coastalmerino" target="_blank" rel="noopener">@coastalmerino</a></p></div>
       </div>
     </div>
   </section>

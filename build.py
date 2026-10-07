@@ -44,16 +44,16 @@ PAGES = [
     dict(src="index.html", out="index.html", path="/", title="Coastal Merino",
          og_title="Coastal Merino",
          description="The 100% merino golf polo. Coming soon.",
-         jsonld=ORG_JSONLD, preload="hero.jpg", preload_sizes="(max-width: 640px) 175vw, 100vw"),
+         jsonld=ORG_JSONLD, preload="polo-4.jpg", preload_sizes="(max-width: 900px) 100vw, 46vw"),
     dict(src="polo.html", out="polo.html", path="/polo", title="The Merino Polo | Coastal Merino",
          og_title="The Merino Polo", og_type="product", cur="polo",
          description="A golf polo knit entirely from superfine New Zealand merino. Nothing synthetic. Coming soon.",
          jsonld=crumbs_jsonld([("Home", "/"), ("The Merino Polo", "/polo")]), preload="polo-2.jpg",
-         preload_sizes="(max-width: 960px) 100vw, 56vw"),
+         preload_sizes="(max-width: 960px) 100vw, 58vw"),
     dict(src="our-story.html", out="our-story.html", path="/our-story", title="Our Story | Coastal Merino",
          og_title="Our Story", cur="story",
          description="Why we're making a golf polo from 100% merino, and the standards behind every one.",
-         jsonld=crumbs_jsonld([("Home", "/"), ("Our Story", "/our-story")]), preload="story-hero.jpg", preload_sizes="(max-width: 640px) 200vw, 100vw"),
+         jsonld=crumbs_jsonld([("Home", "/"), ("Our Story", "/our-story")]), preload="story-hero.jpg", preload_sizes="(max-width: 860px) 100vw, 48vw"),
     dict(src="faq.html", out="faq.html", path="/faq", title="Help & FAQ | Coastal Merino",
          og_title="Help & FAQ", cur="help",
          description="Answers about the Coastal Merino polo, the fabric, sizing, shipping, and returns.",
@@ -153,7 +153,7 @@ def faq_jsonld(body):
 
 
 def minify_css():
-    css = read(ROOT, "assets", "site.css")
+    css = read(ROOT, "fonts", "fonts.css") + read(ROOT, "assets", "site.css")
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     css = re.sub(r"\s+", " ", css)
     css = re.sub(r"\s*([{}:;,>])\s*", r"\1", css)
@@ -167,7 +167,7 @@ def minify_css():
 def main():
     minify_css()
     info = resize_all()
-    version = hashlib.sha1((read(ROOT, "assets", "site.css") + read(ROOT, "assets", "site.js")).encode()).hexdigest()[:8]
+    version = hashlib.sha1((read(ROOT, "fonts", "fonts.css") + read(ROOT, "assets", "site.css") + read(ROOT, "assets", "site.js")).encode()).hexdigest()[:8]
     head, header, footer = partial("head"), partial("header"), partial("footer")
     report = []
 

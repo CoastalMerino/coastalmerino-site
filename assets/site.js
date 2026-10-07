@@ -97,36 +97,63 @@
     });
   }
 
-  /* Product gallery dots (mobile carousel) */
-  var gallery = document.querySelector(".gallery");
-  var dots = document.querySelector(".gallery-dots");
-  if (gallery && dots) {
-    var slides = gallery.querySelectorAll(".photo");
-    Array.prototype.forEach.call(slides, function (s, i) {
-      var d = document.createElement("button");
-      d.type = "button";
-      d.setAttribute("aria-label", "Show image " + (i + 1) + " of " + slides.length);
-      d.addEventListener("click", function () {
-        gallery.scrollTo({ left: s.offsetLeft - gallery.offsetLeft, behavior: "smooth" });
-      });
-      dots.appendChild(d);
-    });
-    var setActive = function () {
-      var i = Math.round(gallery.scrollLeft / Math.max(1, gallery.clientWidth));
-      Array.prototype.forEach.call(dots.children, function (d, j) {
-        d.setAttribute("aria-current", String(i === j));
-      });
+  /* Product image viewer: arrows, counter, thumbnails, swipe */
+  var slides = document.getElementById("slides");
+  if (slides) {
+    var items = slides.querySelectorAll(".photo");
+    var count = document.getElementById("viewer-count");
+    var thumbs = document.getElementById("thumbs");
+    var prev = document.querySelector('.viewer-ctrls [data-dir="-1"]');
+    var next = document.querySelector('.viewer-ctrls [data-dir="1"]');
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    var current = function () { return Math.round(slides.scrollLeft / Math.max(1, slides.clientWidth)); };
+    var go = function (i) {
+      i = Math.max(0, Math.min(items.length - 1, i));
+      slides.scrollTo({ left: i * slides.clientWidth, behavior: "smooth" });
     };
-    gallery.addEventListener("scroll", function () { window.requestAnimationFrame(setActive); }, { passive: true });
-    setActive();
+    Array.prototype.forEach.call(items, function (it, i) {
+      if (!thumbs) return;
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Show image " + (i + 1) + " of " + items.length);
+      var img = it.querySelector("img");
+      var t = document.createElement("img");
+      t.src = img.currentSrc || img.src;
+      t.alt = "";
+      t.loading = "lazy";
+      b.appendChild(t);
+      b.addEventListener("click", function () { go(i); });
+      thumbs.appendChild(b);
+    });
+    var update = function () {
+      var i = current();
+      if (count) count.textContent = pad(i + 1) + " / " + pad(items.length);
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === items.length - 1;
+      if (thumbs) Array.prototype.forEach.call(thumbs.children, function (b, j) { b.setAttribute("aria-current", String(i === j)); });
+    };
+    if (prev) prev.addEventListener("click", function () { go(current() - 1); });
+    if (next) next.addEventListener("click", function () { go(current() + 1); });
+    slides.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
+    });
+    slides.addEventListener("scroll", function () { window.requestAnimationFrame(update); }, { passive: true });
+    update();
   }
 
-  /* Product page: focus the email field when "Get first access" is pressed */
-  var focusBtn = document.querySelector("[data-focus-email]");
-  if (focusBtn) {
-    focusBtn.addEventListener("click", function () {
-      var f = document.getElementById(focusBtn.getAttribute("data-focus-email"));
-      if (f) { f.hidden = false; focusBtn.hidden = true; f.querySelector("input[type=email]").focus(); }
+  /* Product page: sticky "Get first access" bar on phones once the form scrolls away */
+  var buybar = document.getElementById("buybar");
+  var cta = document.getElementById("pdp-cta");
+  if (buybar && cta && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      var hidden = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+      buybar.classList.toggle("show", hidden);
+      buybar.setAttribute("aria-hidden", String(!hidden));
+      buybar.querySelector("a").tabIndex = hidden ? 0 : -1;
+    }).observe(cta);
+    buybar.querySelector("a").addEventListener("click", function () {
+      setTimeout(function () { var f = document.getElementById("pdp-email"); if (f) f.focus({ preventScroll: true }); }, 400);
     });
   }
 })();

@@ -1,26 +1,23 @@
-# Photo slots
+# Photos
 
-Drop finished photos here with these exact names, then tell Claude to swap the placeholders on dev.
+Drop a finished photo here with the same file name to replace a placeholder, then run `python3 build.py`
+(it makes the resized copies in `images/r/`). Keep each original under about 400 KB (JPG, quality 75 to 80).
 
-| Slot | File | Shape | What it shows |
+Every photo below is currently a free Unsplash placeholder (Unsplash License: free for commercial use,
+no attribution required) and is marked `data-stock="unsplash"` in the page source. Several show other
+brands' garments or logos, so all of them must be replaced or removed before launch. `build.py` counts them.
+
+| File | Shape | Used on | What the real shot should be |
 |---|---|---|---|
-| hero | hero.jpg | Full width, about 16:9 desktop, tall crop on mobile (shoot wide, about 3000px) | Polo worn on course, lifestyle |
-| tile-polo | tile-polo.jpg | 4:5 (about 1600x2000) | The polo itself, clean product shot |
-| tile-fabric | tile-fabric.jpg | 4:5 (about 1600x2000) | Fabric or knit detail |
-| tile-course | tile-course.jpg | 4:5 (about 1600x2000) | Worn off the course, dinner or clubhouse |
-| fabric-macro | fabric-macro.jpg | 1:1 (about 2000x2000) | Close-up of the piqué knit |
-
-Keep each file under about 400 KB (export as JPG, quality 75 to 80).
-Before going live, every slot must either have a photo or be removed. Placeholders should never reach the live site.
-
-## Current stock photos (dev only, temporary)
-
-All five slots currently hold free Unsplash photos (Unsplash License: free for commercial use, no attribution required). They show other brands' garments, so replace them with your own shots before launch. Each is marked `data-stock="unsplash"` in index.html so they're easy to find.
-
-| Slot | Unsplash photo ID |
-|---|---|
-| hero | photo-1742498626081-a64f9677f468 |
-| tile-polo | photo-1625910513394-ea511bed44ca |
-| tile-fabric | photo-1602706294170-1fed8eecd9f9 |
-| tile-course | photo-1780402411700-96a84f2f483a |
-| fabric-macro | photo-1595026525047-dfa997df8a4a |
+| polo-4.jpg | 4:5 | Home hero, product page | Polo worn on course, golden-hour light |
+| tile-polo.jpg | 4:5 | Home "One polo, done properly" | The polo, clean product shot |
+| tile-course.jpg | 4:5 | Home gallery | After the round, clubhouse or dinner |
+| fabric-macro.jpg | 1:1 | Home gallery | The knit, macro |
+| hero.jpg | 16:9 | Home gallery | Wide course landscape |
+| polo-2.jpg | 4:5 | Product page, image 1 | Polo flat lay, front |
+| polo-1.jpg | 4:5 | Product page, image 2 | Collar and placket detail |
+| polo-3.jpg | 4:5 | Product page, image 3 | On model, front |
+| polo-6.jpg | 4:5 | Product page, image 5 | Lifestyle, after the round |
+| story-hero.jpg | 16:10 | Our Story | Founders or home course |
+| story-walk.jpg | 4:5 | Our Story | Walking the course |
+| story-knit.jpg | 4:5 | Our Story | Fiber or yarn detail |
