@@ -82,6 +82,7 @@
 
   .hero { position: relative; min-height: 640px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
   .hero .photo { position: absolute; inset: 0; }
+  .hero .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(18,26,47,0.38), rgba(18,26,47,0.52)); }
   .hero .photo.ph { background: linear-gradient(rgba(18,26,47,0.55), rgba(18,26,47,0.55)), repeating-linear-gradient(135deg, #3A4560 0 14px, #34405A 14px 28px); }
   .hero-copy { position: relative; padding: 96px 24px; max-width: 760px; }
   .hero h1 { font: 500 clamp(44px, 7vw, 76px)/1.02 var(--display); letter-spacing: -0.01em; text-wrap: balance; }
@@ -179,7 +180,7 @@
 <main>
   <section class="hero">
     <!-- PHOTO SLOT: hero. Full-width, about 2400 x 1200. Replace this div's "ph" class and tag with <img src="/images/hero.jpg" alt="..."> -->
-    <div class="photo ph" data-slot="hero"><span class="ph-tag label">Photo coming · Hero, polo on course</span></div>
+    <div class="photo" data-slot="hero" data-stock="unsplash"><img src="/images/hero.jpg" alt="Golf course fairway at dusk" loading="eager" fetchpriority="high"></div>
     <div class="hero-copy">
       <h1>The merino polo.</h1>
       <p>100% superfine merino, made for the course and the dinner after.</p>
@@ -191,21 +192,21 @@
     <div class="inner tiles">
       <div class="tile">
         <!-- PHOTO SLOT: tile-polo. Portrait 4:5, about 1200 x 1500 -->
-        <div class="photo ph" data-slot="tile-polo"><span class="ph-tag label">Photo coming · The polo</span></div>
+        <div class="photo" data-slot="tile-polo" data-stock="unsplash"><img src="/images/tile-polo.jpg" alt="A grey piqué polo laid flat" loading="lazy"></div>
         <h2>The Polo</h2>
         <p>A classic piqué golf polo with a tailored fit and a sewn collar that holds its shape.</p>
         <a class="btn" href="#join">Get first access</a>
       </div>
       <div class="tile">
         <!-- PHOTO SLOT: tile-fabric. Portrait 4:5, close-up of the knit -->
-        <div class="photo ph" data-slot="tile-fabric"><span class="ph-tag label">Photo coming · Fabric close-up</span></div>
+        <div class="photo" data-slot="tile-fabric" data-stock="unsplash"><img src="/images/tile-fabric.jpg" alt="Folded knitwear in cream, tan and gold" loading="lazy"></div>
         <h2>The Fabric</h2>
         <p>Superfine New Zealand merino that breathes, resists odor, and keeps its shape.</p>
         <a class="btn" href="#fabric">Learn more</a>
       </div>
       <div class="tile">
         <!-- PHOTO SLOT: tile-course. Portrait 4:5, golfer wearing it after the round -->
-        <div class="photo ph" data-slot="tile-course"><span class="ph-tag label">Photo coming · After the round</span></div>
+        <div class="photo" data-slot="tile-course" data-stock="unsplash"><img src="/images/tile-course.jpg" alt="A clubhouse lit up at night" loading="lazy"></div>
         <h2>Course to Dinner</h2>
         <p>One polo for eighteen holes and the table afterward, with nothing to change into.</p>
         <a class="btn" href="#story">Our story</a>
@@ -220,7 +221,7 @@
   <section class="section fabric" id="fabric">
     <div class="inner split">
       <!-- PHOTO SLOT: fabric-macro. Square, about 1600 x 1600, piqué knit up close -->
-      <div class="photo ph" data-slot="fabric-macro"><span class="ph-tag label">Photo coming · Piqué knit macro</span></div>
+      <div class="photo" data-slot="fabric-macro" data-stock="unsplash"><img src="/images/fabric-macro.jpg" alt="Close-up of a fine knit" loading="lazy"></div>
       <div>
         <p class="kicker label">The fabric</p>
         <h2 class="h2">Superfine merino, built for eighteen holes and what comes after.</h2>
