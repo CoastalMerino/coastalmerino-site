@@ -129,4 +129,72 @@
       if (f) { f.hidden = false; focusBtn.hidden = true; f.querySelector("input[type=email]").focus(); }
     });
   }
+
+  /* ---------- Progress page: pinned image swaps as each step scrolls into focus ---------- */
+  var scrolly = document.querySelector(".scrolly");
+  if (scrolly) {
+    var steps = scrolly.querySelectorAll(".step");
+    var figs = scrolly.querySelectorAll(".m-stack .m");
+    var railLinks = scrolly.querySelectorAll(".scrolly-rail a");
+    var railList = scrolly.querySelector(".scrolly-rail ol");
+    var num = document.getElementById("m-num");
+    var cap = document.getElementById("m-cap");
+    var bar = document.getElementById("m-bar-fill");
+    var active = -1;
+    var pad2 = function (n) { return (n < 10 ? "0" : "") + n; };
+
+    var setActive = function (i) {
+      if (i === active) return;
+      active = i;
+      Array.prototype.forEach.call(steps, function (s, j) { s.classList.toggle("is-active", j === i); });
+      Array.prototype.forEach.call(figs, function (f, j) { f.classList.toggle("is-active", j === i); });
+      Array.prototype.forEach.call(railLinks, function (a, j) {
+        a.classList.toggle("is-active", j === i);
+        a.classList.toggle("passed", j < i);
+        if (j === i) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
+      });
+      if (num) num.textContent = pad2(i + 1);
+      if (cap) cap.textContent = steps[i].getAttribute("data-cap");
+    };
+
+    var onScroll = function () {
+      var mobile = window.matchMedia("(max-width: 860px)").matches;
+      var mid = window.innerHeight * (mobile ? 0.78 : 0.5);
+      var best = 0;
+      Array.prototype.forEach.call(steps, function (s, j) {
+        if (s.getBoundingClientRect().top < mid) best = j;
+      });
+      setActive(best);
+      var r = scrolly.getBoundingClientRect();
+      var total = r.height - window.innerHeight;
+      var p = Math.max(0, Math.min(1, -r.top / Math.max(1, total)));
+      if (bar) bar.style.width = (p * 100).toFixed(1) + "%";
+      if (railList) railList.style.setProperty("--p", (active / Math.max(1, steps.length - 1)).toFixed(3));
+    };
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () { onScroll(); ticking = false; });
+    }, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+  }
+
+  /* ---------- Gentle reveal for content below the fold ---------- */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var targets = document.querySelectorAll(".tile, .progress-teaser .strip li, .statement p, .std > div, .benefits > div, .split > .photo, .founder blockquote, .story-block > *, .features > div");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    Array.prototype.forEach.call(targets, function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) return; /* already on screen: leave it alone */
+      var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      el.style.transitionDelay = (Math.min(sibs, 5) * 80) + "ms";
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  }
 })();
