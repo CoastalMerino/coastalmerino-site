@@ -295,3 +295,41 @@
 
   .notfound { min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; padding: 96px 24px; }
   .notfound h1 { font: 500 clamp(40px, 5vw, 56px)/1.1 var(--display); }
+
+  /* ---------- Progress (farm to first polo) ---------- */
+  .progress-intro { padding-bottom: 24px; }
+  .progress-intro .lead { font: 400 clamp(24px, 2.6vw, 34px)/1.25 var(--display); max-width: 36ch; }
+  .stage-index { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+  .stage-index a { display: inline-block; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; background: var(--white); }
+  .stage-index a:hover { border-color: var(--ink); }
+  .stages-wrap { padding-top: 40px; }
+  .stages { list-style: none; display: grid; gap: clamp(64px, 9vw, 120px); }
+  .stage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; scroll-margin-top: 96px; }
+  .stage:nth-child(even) .photo { order: 2; }
+  .stage .photo { aspect-ratio: 4 / 5; }
+  .stage-copy { max-width: 520px; }
+  .stage-copy > p:not(.label) { color: var(--muted); }
+  .stage-copy .h2 { margin: 12px 0 16px; }
+  .stage-num { color: var(--muted); }
+  .status { display: inline-block; border-radius: 999px; padding: 6px 12px; margin-bottom: 18px; border: 1px solid var(--line); color: var(--muted); }
+  .status.done { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .status.active { border-color: var(--navy); color: var(--navy); }
+  .stage-copy .btn { margin-top: 22px; }
+  .placeholder-card { background: var(--mist); display: grid; place-items: center; border: 1px dashed rgba(28, 35, 32, 0.25); }
+  .placeholder-card::after { content: "07"; font: 400 clamp(96px, 14vw, 180px)/1 var(--display); color: rgba(28, 35, 32, 0.18); }
+  @media (max-width: 860px) {
+    .stage { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .stage:nth-child(even) .photo { order: 0; }
+    .stage .photo { aspect-ratio: 5 / 4; }
+  }
+
+  /* Home teaser */
+  .progress-teaser .strip { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; margin-top: 40px; }
+  .progress-teaser .strip a { display: grid; gap: 10px; text-decoration: none; }
+  .progress-teaser .strip .photo { aspect-ratio: 4 / 5; }
+  .progress-teaser .strip h3 { font: 400 24px/1.1 var(--display); }
+  .progress-teaser .strip .status { margin: 0; justify-self: start; padding: 4px 10px; }
+  .progress-teaser .strip a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+  .progress-teaser .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  @media (max-width: 1000px) { .progress-teaser .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .progress-teaser .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

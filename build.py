@@ -54,6 +54,11 @@ PAGES = [
          og_title="Our Story", cur="story",
          description="Why we're making a golf polo from 100% merino, and the standards behind every one.",
          jsonld=crumbs_jsonld([("Home", "/"), ("Our Story", "/our-story")]), preload="story-hero.jpg", preload_sizes="(max-width: 860px) 100vw, 48vw"),
+    dict(src="progress.html", out="progress.html", path="/progress", title="Progress | Coastal Merino",
+         og_title="From the farm to the first polo", cur="progress",
+         description="Every step of making the first Coastal Merino polo, from the farm and fabric swatches to the first sample.",
+         jsonld=crumbs_jsonld([("Home", "/"), ("Progress", "/progress")]), preload="progress-hero.jpg",
+         preload_sizes="(max-width: 640px) 200vw, 100vw"),
     dict(src="faq.html", out="faq.html", path="/faq", title="Help & FAQ | Coastal Merino",
          og_title="Help & FAQ", cur="help",
          description="Answers about the Coastal Merino polo, the fabric, sizing, shipping, and returns.",
@@ -200,7 +205,7 @@ def main():
         if p["path"] == "/":
             h = h.replace('href="https://coastalmerino.com"', 'href="https://coastalmerino.com/"')
         hd = header
-        for key in ("polo", "story", "help"):
+        for key in ("polo", "story", "help", "progress"):
             hd = hd.replace("{{cur_%s}}" % key, ' aria-current="page"' if cur == key else "")
         html = h + "\n" + hd + body.rstrip("\n") + "\n" + footer.replace("{{version}}", version)
 

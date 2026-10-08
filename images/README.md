@@ -21,3 +21,11 @@ brands' garments or logos, so all of them must be replaced or removed before lau
 | polo-6.jpg | 4:5 | Product page, image 5 | Lifestyle, after the round |
 | story-hero.jpg | 2:1 | Our Story banner | Founders or home course |
 | story-walk.jpg | 4:5 | Our Story | Walking the course |
+| progress-hero.jpg | 2:1 | Progress banner | Sheep on a New Zealand farm (from the supplier if possible) |
+| step-idea.jpg | 4:5 | Progress 01, home strip | Your sketches, notes, or the reference polo |
+| step-farm.jpg | 4:5 | Progress 02, home strip | The farm or flock the wool comes from |
+| step-swatches.jpg | 4:5 | Progress 03, home strip | Your real swatches laid out on a table |
+| step-yarn.jpg | 4:5 | Progress 04, home strip | Mill photo: yarn cones or the knitting machine |
+| step-sample.jpg | 4:5 | Progress 05, home strip | Pattern pieces, cutting, or the first sample being sewn |
+
+Progress page: when a stage is finished, swap its photo, change its status (`status done`), and update the text in `src/pages/progress.html` and the home strip in `src/pages/index.html`.
